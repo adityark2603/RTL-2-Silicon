@@ -14,7 +14,7 @@ Welcome to my journey through the RISC-V SoC Tapeout program VSD!!! 🥰🥰
 
 ## ⌛ Week 0 - Initial Setup & Tools Installation
 
-### ⭐ Key Learnings from Week 0:
+### Key Learnings from Week 0:
   1. Successfully installed & verified **open-source EDA tools** ecosystem
   2. Learnt about **basic environment setup** for RTL design & synthesis
   3. Prepared for upcoming **RTL ➡️ GSIII** flow projects
