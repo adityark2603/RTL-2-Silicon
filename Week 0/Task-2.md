@@ -37,7 +37,7 @@ $ sudo make install
 ![WhatsApp Image 2025-09-20 at 16 39 36_3dce6e79](https://github.com/user-attachments/assets/9bca2ee7-d005-48c1-8538-dcfabff337c1)
 
 
-### 🧠 <ins>**Iverilog Tool**</ins>:
+### 🧠 <ins>**iverilog Tool**</ins>:
 ```bash
 $ sudo apt-get update
 $ sudo apt-get install iverilog
