@@ -54,7 +54,8 @@ $ sudo apt install gtkwave
 ```
 #### Output: 
 
-![WhatsApp Image 2025-09-20 at 14 58 13_be117a43](https://github.com/user-attachments/assets/0e2ff7c1-2c93-4d2e-ad64-5d04be3f2733)
+<img width="1110" height="540" alt="image" src="https://github.com/user-attachments/assets/d1314370-0aa3-470c-8eeb-014c6d917b64" />
+
 
 
 ### 🌶️ <ins>**NGSpice Tool**</ins>:
