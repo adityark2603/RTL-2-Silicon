@@ -125,7 +125,8 @@ $ sudo apt-get install docker-ce docker-ce-cli containerd.io
 $ sudo docker run hello-world
 ```
 #### Output
-![WhatsApp Image 2025-09-20 at 16 15 25_f8fc9ea8](https://github.com/user-attachments/assets/409b7856-4391-4687-beb8-8c5ad8bdcc81)
+<img width="725" height="407" alt="image" src="https://github.com/user-attachments/assets/75170df3-663f-4a99-bb76-946a9a047f8b" />
+
 
 ### 🖥️ <ins>**OpenLane Tool**</ins>:
 #### 1. Verify tools
