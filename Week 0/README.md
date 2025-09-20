@@ -9,7 +9,7 @@
 
 ### **<ins>Tool Installation Check</ins>**:
 
-### <ins>**Yosys Tool**</ins>:
+### ✨ <ins>**Yosys Tool**</ins>: 
 #### 1. Set up & get source code
 ```bash
 $ sudo apt-get update
@@ -37,7 +37,7 @@ $ sudo make install
 ![WhatsApp Image 2025-09-20 at 16 39 36_3dce6e79](https://github.com/user-attachments/assets/9bca2ee7-d005-48c1-8538-dcfabff337c1)
 
 
-### <ins>**Iverilog Tool**</ins>:
+### 🧠 <ins>**Iverilog Tool**</ins>:
 ```bash
 $ sudo apt-get update
 $ sudo apt-get install iverilog
@@ -47,7 +47,7 @@ $ sudo apt-get install iverilog
 
 ![WhatsApp Image 2025-09-20 at 14 55 02_24491e66](https://github.com/user-attachments/assets/c7049acd-6df0-4ee8-85b7-7de1124cf8c4)
 
-### <ins>**gtkwave Tool**</ins>:
+### 🚦<ins>**gtkwave Tool**</ins>:
 ```bash
 $ sudo apt-get update
 $ sudo apt install gtkwave
@@ -57,7 +57,7 @@ $ sudo apt install gtkwave
 ![WhatsApp Image 2025-09-20 at 14 58 13_be117a43](https://github.com/user-attachments/assets/0e2ff7c1-2c93-4d2e-ad64-5d04be3f2733)
 
 
-### <ins>**NGSpice Tool**</ins>:
+### 🌶️ <ins>**NGSpice Tool**</ins>:
 #### 1. Prepare the system & download NGSpice
 ```bash
 $ sudo apt update && sudo apt upgrade -y
@@ -84,7 +84,7 @@ $ sudo make install
 
 ![WhatsApp Image 2025-09-20 at 15 45 39_fc6fe343](https://github.com/user-attachments/assets/76ae501c-8906-40bf-84a8-8c95b8f97e24)
 
-### <ins> **Magic VLSI Tool**</ins>:
+### 🔮 <ins> **Magic VLSI Tool**</ins>:
 #### 1. Prepare the system & get the source
 ``` bash
 $ sudo apt update && sudo apt upgrade -y
@@ -105,7 +105,7 @@ $ sudo make install
 ![WhatsApp Image 2025-09-20 at 15 53 35_392bcdb4](https://github.com/user-attachments/assets/6d5c0e36-d0ce-4d40-8a2c-6143d3f1715c)
 
 
-### <ins> **Docker Tool** </ins>:
+### 🐳 <ins> **Docker Tool** </ins>:
 #### 1. Setup Docker
 ``` bash
 $ sudo apt-get update
@@ -126,7 +126,7 @@ $ sudo docker run hello-world
 #### Output
 ![WhatsApp Image 2025-09-20 at 16 15 25_f8fc9ea8](https://github.com/user-attachments/assets/409b7856-4391-4687-beb8-8c5ad8bdcc81)
 
-## <ins>**OpenLane Tool**</ins>:
+### 🖥️ <ins>**OpenLane Tool**</ins>:
 #### 1. Verify tools
 ``` bash
 $ git --version
