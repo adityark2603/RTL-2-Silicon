@@ -24,3 +24,7 @@ Welcome to my journey through the RISC-V SoC Tapeout program VSD!!! 🥰🥰
 I am grateful to [**Kunal Ghosh**](https://github.com/kunalg123) and Team **[VLSI System Design (VSD)](https://vsdiat.vlsisystemdesign.com/)** for the opportunity to participate in the ongoing **RISC-V SoC Tapeout Program**. 
 
 ## 📈 **Weekly Progress Tracker**
+
+![Week 0](https://img.shields.io/badge/Week%200-Tools%20Setup_and_Installation-success?style=flat-square)
+![Week 1](https://img.shields.io/badge/Week%201-Coming%20Soon-lightgrey?style=flat-square)
+![Week 2](https://img.shields.io/badge/Week%202-Upcoming-lightgrey?style=flat-square)
