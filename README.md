@@ -27,4 +27,4 @@ I am grateful to [**Kunal Ghosh**](https://github.com/kunalg123) and Team **[VLS
 
 ![Week 0](https://img.shields.io/badge/Week%200-Tools%20Setup_and_Installation-success?style=flat-square)
 ![Week 1](https://img.shields.io/badge/Week%201-Coming%20Soon-lightgrey?style=flat-square)
-![Week 2](https://img.shields.io/badge/Week%202-Upcoming-lightgrey?style=flat-square)
+![Week 2](https://img.shields.io/badge/Week%202-Coming%20Soon-lightgrey?style=flat-square)
