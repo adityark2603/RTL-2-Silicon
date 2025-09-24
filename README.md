@@ -26,6 +26,7 @@ Welcome to my journey through the RISC-V SoC Tapeout program VSD!!! 🥰🥰
 <br>
 
 ## 📌 Week 1 - Verilog RTL Design & Synthesis
+<br>
 
 
 
