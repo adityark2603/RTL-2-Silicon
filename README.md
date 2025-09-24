@@ -25,6 +25,9 @@ Welcome to my journey through the RISC-V SoC Tapeout program VSD!!! 🥰🥰
   3. Prepared for upcoming **RTL ➡️ GSIII** flow projects
 <br>
 
+## 📌 Week 1 - Verilog RTL Design & Synthesis
+
+
 
 ## 🙏 Acknowledgment 
 I am grateful to [**Kunal Ghosh**](https://github.com/kunalg123) and Team **[VLSI System Design (VSD)](https://vsdiat.vlsisystemdesign.com/)** for the opportunity to participate in the ongoing **RISC-V SoC Tapeout Program**. 
@@ -34,5 +37,7 @@ I am grateful to [**Kunal Ghosh**](https://github.com/kunalg123) and Team **[VLS
 ## 📈 Weekly Progress Tracker
 
 ![Week 0](https://img.shields.io/badge/Week%200-Tools%20Setup_and_Installation-success?style=flat-square)
-![Week 1](https://img.shields.io/badge/Week%201-Coming%20Soon-lightgrey?style=flat-square)
+![Week 1](https://img.shields.io/badge/Week%201-Verilog_RTL_Design_&_Synthesis-success?style=flat-square)
 ![Week 2](https://img.shields.io/badge/Week%202-Coming%20Soon-lightgrey?style=flat-square)
+![Week 3](https://img.shields.io/badge/Week%202-Coming%20Soon-lightgrey?style=flat-square)
+
