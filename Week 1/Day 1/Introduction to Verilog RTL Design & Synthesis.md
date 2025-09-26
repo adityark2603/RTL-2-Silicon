@@ -30,7 +30,7 @@ A tool used to convert RTL to a netlist.
 
 ---
 
-### <ins>What is `.lib`?</ins>
+### What is `.lib`?
 - Collection of logical modules.  
 - Includes basic logic gates like **AND, OR, NOT, etc.**  
 - Contains different flavours of the same gate: **Slow, Fast, Medium**  
