@@ -3,7 +3,7 @@
 
 
 
-### <ins>SKY130 PDK Overview:</ins>
+### ☁️ <ins>SKY130 PDK Overview:</ins> 
 
 The SKY130 PDK is an open-source Process Design Kit based on SkyWater Technology's 130nm CMOS technology. It provides essential models and libraries for integrated circuit (IC) design, including timing, power, and process variation information.
 
@@ -24,19 +24,18 @@ The SKY130 PDK is an open-source Process Design Kit based on SkyWater Technology
 
 ---
 
-## 🏆 NAND vs NOR Implementation
-
+### 🏆 NAND vs NOR Implementation
 
 | Aspect | NAND Gate | NOR Gate | Advantage |
-|--------|-----------|----------|-----------|
-| **Transistor Efficiency** | Pull-down (NMOS) in series<br>Pull-up (PMOS) in parallel | Pull-down (NMOS) in parallel<br>Pull-up (PMOS) in series | **NAND** - Faster, smaller, better PMOS arrangement |
-| **Speed** | Shorter propagation delay | Delay worsens with increased fan-in (series PMOS) | **NAND** - Better scalability with input size |
-| **Power Consumption** | Less static and dynamic power | Higher capacitance from series PMOS | **NAND** - More power efficient |
-| **Universality** | Universal gate | Universal gate | **Equal** - Both can implement any Boolean function |
-| **Practical Usage** | Preferred in fabrication | Less preferred | **NAND** - Better performance in CMOS |
-| **Memory Applications** | NAND flash: higher density, lower cost, lower power | NOR flash: faster random access | **NAND** - Dominates market for density/cost |
+| :--- | :--- | :--- | :--- |
+| **Transistor Efficiency** | PDN (NMOS) in series<br>PUN (PMOS) in parallel | PDN (NMOS) in parallel<br>PUN (PMOS) in series | **NAND** - Faster, smaller, better PMOS arrangement |
+| **Speed** | Shorter propagation delay | Delay worsens with fan-in (series PMOS) | **NAND** - Better scalability |
+| **Power Consumption** | Lower static & dynamic power | Higher capacitance from series PMOS | **NAND** - More power-efficient |
+| **Universality** | Universal gate | Universal gate | **Equal** |
+| **Practical Usage** | Preferred in fabrication | Less preferred | **NAND** - Better CMOS performance |
+| **Memory Applications** | NAND Flash: High density, low cost | NOR Flash: Faster random access | **NAND** - Dominates for storage |
 
-
+***Abbreviations:** PDN = Pull-Down Network, PUN = Pull-Up Network*
 
 ---
 
@@ -48,26 +47,13 @@ The SKY130 PDK is an open-source Process Design Kit based on SkyWater Technology
 - Reduces tool runtime and complexity
 - Pre-optimized modules (ALU, FIFO, decoder) can be reused across projects
 - Easier to test and pinpoint issues in smaller blocks
-- Change one module without resynthesizing entire chip
-- Saves time in iterative design cycles
-- Different constraints per module (speed vs area optimization)
-- Third-party IPs provided as pre-synthesized netlists
-
----
-
-
+</br>
 
 ### ❓ *Why are Flip-Flops Essential?*
-- Store 1 bit of data enabling sequential circuits
-- Examples: counters, registers, processors
-- Capture data only on clock edges
-- Prevents race conditions
-- Pipelining improves maximum operating frequency
-- Cuts long delays into manageable stages
-
----
-
-
+- They provide memory capability, allowing circuits to remember past states for sequential logic operations.
+- They synchronize all circuit operations to clock edges, preventing timing errors and race conditions.
+- They enable pipelining and glitch filtering by breaking long combinational paths and ensuring stable data sampling.
+</br>
 
 ### ❓ *What is a Glitch?*
 - Unwanted short pulse caused by different path delays in combinational logic
@@ -76,9 +62,9 @@ The SKY130 PDK is an open-source Process Design Kit based on SkyWater Technology
 
 ---
 
-## Flip-Flop Timing Parameters
+## ⌛ Flip-Flop Timing Parameters 
 
-### 🔹 Key Delays in Flip-Flops
+
 
 | Parameter | Description | Importance |
 |-----------|-------------|------------|
@@ -89,45 +75,33 @@ The SKY130 PDK is an open-source Process Design Kit based on SkyWater Technology
 **⚠️ Violations cause metastability (unpredictable output)**
 
 ---
+### **📝 <ins> D Flip-Flop applications</ins>**: 
+#### 1. In Combinational Circuits
+- Output synchronization to a clock edge
+- Glitch filtering at the final output stage
+- Pipeline stage insertion for timing optimization
 
-## Flip-Flop Applications
+#### 2. In Sequential circuits
+- State storage for finite state machines
+- Data storage in registers and memory elements
+- Synchronization element in counters and shift registers
 
-### 🔹 1. In Combinational Circuits
-- **Synchronize Outputs:** Ensure stable outputs at clock edges
-- **Glitch Prevention:** Filter unwanted transitions
-- **Pipelining:** Break long paths into stages (e.g., 32-bit adder → 8-bit stages)
 
-### 🔹 2. In Sequential Circuits
-- **State Storage:** Memory for counters, FSMs, shift registers
-- **Synchronization:** Clocked operation prevents race conditions
-- **Stability:** Prevent oscillations in feedback paths
+### **📝<ins> D Flip-Flop Types</ins>**: 
+#### 1. Synchronous (Syn) DFF
+- Definition: Input changes affect output only at clock edges
+- Usage: Registers, pipelines, counters, state machines
+- Timing: Tsetup, Thold, Tcq
+- Advantages: Predictable, easy to analyze, eliminates race conditions
 
----
+#### 2. Asynchronous (Async) DFF  
+- Definition: Output changes via external signals (reset/preset), ignoring clock
+- Usage: Counter reset, register initialization, interrupt handling
+- Characteristics: Immediate response, potential timing hazards
+- Advantages: Fast control response
+- Disadvantages: Metastability risk, harder timing control
 
-## D Flip-Flop Types
 
-### 🔹 2. Synchronous (Syn) DFF
-- **Definition:** Input changes affect output only at clock edges
-- **Usage:** Registers, pipelines, counters, state machines
-- **Timing:** Tsetup, Thold, Tcq
-- **Advantages:** Predictable, easy to analyze, eliminates race conditions
 
-### 🔹 3. Asynchronous (Async) DFF  
-- **Definition:** Output changes via external signals (reset/preset) ignoring clock
-- **Usage:** Counter reset, register initialization, interrupt handling
-- **Characteristics:** Immediate response, potential timing hazards
-- **Advantages:** Fast control response
-- **Disadvantages:** Metastability risk, harder timing control
 
----
-
-## Key Takeaways
-
-### 🎯 Summary
-- **NAND gates** are preferred over NOR for better performance in CMOS
-- **Submodule synthesis** enables scalable, reusable, and manageable design flow
-- **Flip-flops** are crucial for state storage, synchronization, and timing control
-- **Glitches** are filtered by clocked flip-flop sampling
-- **Synchronous DFFs** provide predictable timing for most sequential designs
-- **Asynchronous DFFs** offer immediate control but require careful handling
 
