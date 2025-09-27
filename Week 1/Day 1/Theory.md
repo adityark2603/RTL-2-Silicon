@@ -35,7 +35,7 @@ A tool used to convert RTL to a netlist.
 
 ---
 
-### What is `.lib`?
+###  What is `.lib`?
 - Collection of logical modules.  
 - Includes basic logic gates like **AND, OR, NOT, etc.**  
 - Contains different flavours of the same gate: **Slow, Fast, Medium**  
@@ -61,18 +61,6 @@ $$
 - Overuse of faster cells → Bad circuit in terms of **power & area**, plus **hold time violations**.  
 - Overuse of slower cells → **Sluggish circuit**, may fail to meet performance requirements.  
 
----
-
-## Faster Cells vs Slower Cells
-
-In digital logic circuits, the **load** is represented by **capacitance**.  
-The charging/discharging speed of this capacitance determines the **cell delay**.
-
-- Faster charging/discharging → Lesser delay  
-- Slower charging/discharging → More delay  
-
-To achieve faster charging/discharging, transistors must be able to source more current.  
-This introduces a trade-off between **speed, area, and power**.
 
 ---
 
