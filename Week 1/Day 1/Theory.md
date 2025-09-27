@@ -21,7 +21,7 @@ Set up to apply stimulus (test vectors) to the design to check its functionality
 2. Upon a change to the input, the output is evaluated.  
 3. The simulator is looking for a change in the values of the input.  
 
----
+
 
 ### Synthesizer:
 A tool used to convert RTL to a netlist.  
