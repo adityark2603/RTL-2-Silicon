@@ -26,14 +26,15 @@ The SKY130 PDK is an open-source Process Design Kit based on SkyWater Technology
 
 ### 🏆 NAND vs NOR Implementation
 
-| Aspect | NAND Gate | NOR Gate | Advantage |
-| :--- | :--- | :--- | :--- |
-| **Transistor Efficiency** | PDN (NMOS) in series<br>PUN (PMOS) in parallel | PDN (NMOS) in parallel<br>PUN (PMOS) in series | **NAND** - Faster, smaller, better PMOS arrangement |
-| **Speed** | Shorter propagation delay | Delay worsens with fan-in (series PMOS) | **NAND** - Better scalability |
-| **Power Consumption** | Lower static & dynamic power | Higher capacitance from series PMOS | **NAND** - More power-efficient |
-| **Universality** | Universal gate | Universal gate | **Equal** |
-| **Practical Usage** | Preferred in fabrication | Less preferred | **NAND** - Better CMOS performance |
-| **Memory Applications** | NAND Flash: High density, low cost | NOR Flash: Faster random access | **NAND** - Dominates for storage |
+| Aspect              | NAND Gate                          | NOR Gate                          | Advantage                          |
+|---------------------|------------------------------------|-----------------------------------|------------------------------------|
+| Transistor Efficiency | PDN (NMOS) in series, PUN (PMOS) in parallel | PDN (NMOS) in parallel, PUN (PMOS) in series | NAND - Faster, smaller, better PMOS arrangement |
+| Speed               | Shorter propagation delay          | Delay worsens with fan-in (series PMOS) | NAND - Better scalability          |
+| Power Consumption   | Lower static & dynamic power       | Higher capacitance from series PMOS | NAND - More power-efficient        |
+| Universality        | Universal gate                     | Universal gate                    | Equal                              |
+| Practical Usage     | Preferred in fabrication           | Less preferred                    | NAND - Better CMOS performance     |
+| Memory Applications | NAND Flash: High density, low cost | NOR Flash: Faster random access   | NAND - Dominates for storage       |
+
 
 ***Abbreviations:** PDN = Pull-Down Network, PUN = Pull-Up Network*
 
@@ -41,7 +42,7 @@ The SKY130 PDK is an open-source Process Design Kit based on SkyWater Technology
 
 
 
-### ❓ *Why is Submodule Synthesis Needed?*
+###  ❓Why is Submodule Synthesis Needed?
 
 - Breaks large designs into manageable blocks
 - Reduces tool runtime and complexity
@@ -49,13 +50,13 @@ The SKY130 PDK is an open-source Process Design Kit based on SkyWater Technology
 - Easier to test and pinpoint issues in smaller blocks
 </br>
 
-### ❓ *Why are Flip-Flops Essential?*
+### ❓Why are Flip-Flops Essential?
 - They provide memory capability, allowing circuits to remember past states for sequential logic operations.
 - They synchronize all circuit operations to clock edges, preventing timing errors and race conditions.
 - They enable pipelining and glitch filtering by breaking long combinational paths and ensuring stable data sampling.
 </br>
 
-### ❓ *What is a Glitch?*
+### ❓What is a Glitch?
 - Unwanted short pulse caused by different path delays in combinational logic
 - **Danger:** Can trigger unintended events in combinational systems
 - **Solution:** Flip-flops filter glitches by sampling only at clock edges
@@ -75,7 +76,7 @@ The SKY130 PDK is an open-source Process Design Kit based on SkyWater Technology
 **⚠️ Violations cause metastability (unpredictable output)**
 
 ---
-### **📝 <ins> D Flip-Flop applications</ins>**: 
+### **📝 <ins> D Flip-Flop Applications</ins>**: 
 #### 1. In Combinational Circuits
 - Output synchronization to a clock edge
 - Glitch filtering at the final output stage
