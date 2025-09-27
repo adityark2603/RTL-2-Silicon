@@ -1,15 +1,20 @@
 # RISC-V SoC Tapeout Program VSD
 ## Introduction to Verilog RTL Design & Synthesis ✏️
-
 ### Simulator:
 RTL Design is checked for adherence to the specifications by simulating the design.  
-**Example:** `iverilog`
+**Example:** `iverilog` <br>
+
+![iverilog Based Simulation flow](https://github.com/user-attachments/assets/b5169cdb-20c0-4105-a0c9-c1daeee4ca0c)
+
 
 ### Design:
 Actual Verilog code that has the intended functionality to meet the required specifications. 
 
 ### Testbench:
-Set up to apply stimulus (test vectors) to the design to check its functionality. 
+Set up to apply stimulus (test vectors) to the design to check its functionality. <br>
+
+![Testbench flow](https://github.com/user-attachments/assets/2caed17b-2577-4d44-924b-c6b6a8011846)
+
 
 ### Working of a Simulator:
 1. The simulator looks for the changes in the input signals.  
