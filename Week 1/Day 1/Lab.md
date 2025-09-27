@@ -1,4 +1,4 @@
-# RISC SoC Tapeout Program VSD
+# RISC-V SoC Tapeout Program VSD
 ## Introduction to Verilog RTL Design & Synthesis: ⌨️
 #### 1. Set up & clone files
 ```bash
