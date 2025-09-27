@@ -62,18 +62,32 @@ The SKY130 PDK is an open-source Process Design Kit based on SkyWater Technology
 - **Solution:** Flip-flops filter glitches by sampling only at clock edges
 
 ---
+## Hierarchical vs. Flattened Synthesis
+### ✒️ <ins>Hierarchical Synthesis:</ins>
+- **Definition**: Retains the module hierarchy as defined in RTL, synthesizing modules separately.
+- **How it Works**: Tools like Yosys process each module independently, using commands such as `hierarchy` to analyze and set up the design structure.
 
-## ⌛ Flip-Flop Timing Parameters 
+**Advantages:**
+- Faster synthesis time for large designs.
+- Improved debugging and analysis due to maintained module boundaries.
+- Modular approach, aiding integration with other tools.
 
+**Disadvantages:**
+- Cross-module optimizations are limited.
+- Reporting can require additional configuration.
 
+### ✒️ <ins>Flattened Synthesis:</ins>
+- **Definition**: Merges all modules into a single flat netlist, eliminating hierarchy.
+- **How it Works**: The `flatten` command in Yosys collapses the hierarchy, allowing whole-design optimizations.
 
-| Parameter | Description | Importance |
-|-----------|-------------|------------|
-| **Setup Time (Tsetup)** | Input must be stable before clock edge | Prevents metastability |
-| **Hold Time (Thold)** | Input must remain stable after clock edge | Ensures proper capture |
-| **Clock-to-Q Delay (Tcq)** | Output delay after clock edge | Defines propagation timing |
+**Advantages:**
+- Enables aggressive, cross-module optimizations.
+- Results in a unified netlist, sometimes simplifying downstream processes.
 
-**⚠️ Violations cause metastability (unpredictable output)**
+**Disadvantages:**
+- Longer runtime for large designs.
+- Loss of hierarchy complicates debugging and reporting.
+- Can increase memory usage and netlist complexity.
 
 ---
 ### **📝 <ins> D Flip-Flop Applications</ins>**: 
@@ -88,7 +102,7 @@ The SKY130 PDK is an open-source Process Design Kit based on SkyWater Technology
 - Synchronization element in counters and shift registers
 
 
-### **📝<ins> D Flip-Flop Types</ins>**: 
+### **📝 <ins> D Flip-Flop Types</ins>**: 
 #### 1. Synchronous (Syn) DFF
 - Definition: Input changes affect output only at clock edges
 - Usage: Registers, pipelines, counters, state machines
