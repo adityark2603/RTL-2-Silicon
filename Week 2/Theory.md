@@ -10,6 +10,9 @@ This improves performance, lowers power, saves board area, and reduces cost.
 
 SoCs are widely used in **mobile devices, IoT gadgets, embedded controllers, automotive ECUs, and edge AI hardware**.  
 
+<img width="867" height="1305" alt="image" src="https://github.com/user-attachments/assets/23edd6f7-82e4-4a4e-90c9-5cf6b8262598" />
+
+
 
 ---
 
@@ -79,4 +82,13 @@ Functional modelling = validating system behaviour **before** RTL coding & physi
 - **Testbenches** — clock/reset generators, ROM loaders, peripheral drivers.  
 - **Assertions** — check bus protocols, ready/valid handshakes.  
 
+---
+## 🧮 Short Note on VSD's BabySoC:
+The VSDBabySoC is a simple SoC (System-on-Chip) design incorporating a RISC-V processor (rvmyth), a PLL (Phase-Locked Loop) module (pll), and a DAC (Digital-to-Analog Converter) module (dac).
+
+- RVMYTH microprocessor – executes instructions and cycles values through register r17.
+- Phase-Locked Loop (PLL) – generates a stable, synchronized clock for all components.
+- 10-bit DAC – converts digital values into analog signals.
+
+<img width="2270" height="1260" alt="image" src="https://github.com/user-attachments/assets/5d994e21-dc88-4850-a40c-8b043dbfc5cc" />
 
