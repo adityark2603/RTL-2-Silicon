@@ -53,9 +53,13 @@ $$
 f_{clk_{MAX}} \=\ \frac{1}{T_{clk_{MIN}}}
 $$
 
-
 - We need **fast cells** to make `T_COMBINATIONAL` small and meet required performance.  
-- We need **slow cells** to ensure there are no **HOLD issues** at `DFF_B`.  
+- We need **slow cells** to ensure there are no **HOLD issues** at `DFF_B`.
+
+  
+![WhatsApp Image 2025-09-27 at 07 29 13_d70e6677](https://github.com/user-attachments/assets/4e654c5e-ad43-4354-98aa-c8b913dbb9c5)
+
+
 
 ⚡ **Cell Selection is Important!**  
 - Overuse of faster cells → Bad circuit in terms of **power & area**, plus **hold time violations**.  
