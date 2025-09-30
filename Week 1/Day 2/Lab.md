@@ -180,3 +180,60 @@ $ show
 ``` bash
 $ gvim mult_*.v -o
 ```
+
+#### Code:
+
+<img width="1795" height="750" alt="image" src="https://github.com/user-attachments/assets/0b59d800-40f6-42d3-829e-80a96e330ffc" />
+
+### <ins>mul2</ins>:
+```bash
+$ yosys
+$ read_liberty /home/aditya/sky130RTLDesignAndSynthesisWorkshop/lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+$ read_verilog mult_2.v
+$ synth -top mul2
+$ abc -liberty /home/aditya/sky130RTLDesignAndSynthesisWorkshop/lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+$ show
+```
+
+#### Output:
+
+![WhatsApp Image 2025-09-27 at 12 35 16_461a89af](https://github.com/user-attachments/assets/b54abfbb-b416-4ffe-9f1d-1614d0d5ef00)
+
+#### Netlist:
+```bash
+$ write_verilog -noattr mul2_net.v
+$ !gvim mul2_net.v
+```
+
+#### Code:
+
+<img width="1792" height="854" alt="image" src="https://github.com/user-attachments/assets/727bc0dc-ee68-4d61-abce-d413d7398484" />
+
+
+
+### <ins>mul8</ins>:
+```bash
+$ yosys
+$ read_liberty /home/aditya/sky130RTLDesignAndSynthesisWorkshop/lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+$ read_verilog mult_8.v
+$ synth -top mult8
+$ abc -liberty /home/aditya/sky130RTLDesignAndSynthesisWorkshop/lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+$ show
+```
+
+#### Output:
+
+![WhatsApp Image 2025-09-27 at 12 40 27_4e854a28](https://github.com/user-attachments/assets/2061b075-aaa5-413a-925f-2a0a354f4ebc)
+
+#### Netlist:
+```bash
+$ write_verilog -noattr mult8_net.v
+$ !gvim mult8_net.v
+```
+
+#### Code:
+
+<img width="1795" height="855" alt="image" src="https://github.com/user-attachments/assets/acebbf72-f9a1-4aef-bff0-bd7c531e08a1" />
+
+
+
