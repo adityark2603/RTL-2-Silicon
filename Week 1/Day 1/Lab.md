@@ -35,7 +35,7 @@ end
 endmodule
 ```
 
-#### 5. **Testbench code for MUX (`tb_good_mux.v`):
+#### 5. Testbench code for MUX (`tb_good_mux.v`):
 ``` verilog
 `timescale 1ns / 1ps
 module tb_good_mix;
