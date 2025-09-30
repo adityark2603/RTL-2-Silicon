@@ -35,7 +35,37 @@ end
 endmodule
 ```
 
-#### 5. Checking with Yosys:
+#### 5. **Testbench code for MUX (`tb_good_mux.v`):
+``` verilog
+`timescale 1ns / 1ps
+module tb_good_mix;
+    // Inputs
+    reg i0, i1, sel;
+    // Outputs
+    wire y;
+
+    // Instantiate the Unit Under test (UUT)
+    good_mux uut (
+             .sel(sel),
+             .i0(i0),
+             .i1(i1),
+             .y(y)
+    );
+
+    initial begin
+    $dumpfile("tb_good_mux.vcd");
+    $dumpvars(0,tb_good_mux);
+    // Initialise inputs
+    sel = 0;
+    i0 = 0;
+    i1 = 0;
+    #300 $finish;
+    end
+
+```
+
+
+#### 6. Checking with Yosys:
 ``` bash
 $ yosys
 $ read_liberty -lib /home/aditya/sky130RTLDesignAndSynthesisWorkshop/lib/sky130_fd_sc_hd__tt_025C_1v80.lib
@@ -46,7 +76,7 @@ $ abc -liberty /home/aditya/sky130RTLDesignAndSynthesisWorkshop/lib/sky130_fd_sc
 #### Output:
 ![2-to-1 MUX Printing statistics](https://github.com/user-attachments/assets/81bbd476-a8af-4145-9cee-f5037d66fc11)
 
-#### 6. View the gate-level netlist:
+#### 7. View the gate-level netlist:
 ```bash
 $ show
 ```
