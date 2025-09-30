@@ -1,5 +1,60 @@
 # RISC-V SoC Tapeout Program VSD
 ## Timing Libraries, Synthesis Approaches, and Efficient Flip-Flop Coding ✨
+## 📊 <ins>Hierarchical vs Flat Synthesis</ins> 
+### <ins>**Multiple Module Synthesis:**</ins>
+``` bash
+$ gvim multiple_modules.v
+```
+
+#### Code:
+
+![WhatsApp Image 2025-09-27 at 07 43 02_3344ec23](https://github.com/user-attachments/assets/7b105db2-c508-4a23-800b-3e17731b0869)
+
+#### **Synthesized view of Multiple modules:**
+```bash
+$ yosys
+$ read_liberty -lib /home/aditya/sky130RTLDesignAndSynthesisWorkshop/lib/sky_130_fd_sc_hd__tt_025C_1v80.lib
+$ read_verilog multiple_modules.v
+$ synth -top multiple_modules
+$ abc -liberty /home/aditya/sky130RTLDesignAndSynthesisWorkshop/lib/sky_130_fd_sc_hd__tt_025C_1v80.lib
+$ show multiple_modules
+```
+#### Output:
+
+![WhatsApp Image 2025-09-27 at 07 51 23_7e475f19](https://github.com/user-attachments/assets/44e381f4-93f0-4485-b518-6ac119c7c7b0)
+
+#### **Hierarchial Netlist:**
+``` bash
+$ write_verilog -noattr multiple_modules_hier.v
+$ !gvim multiple_modules_hier.v
+```
+
+#### Code:
+
+![WhatsApp Image 2025-09-27 at 07 53 55_f6de60cf](https://github.com/user-attachments/assets/5d07d222-2b4a-48c0-b0c0-8166d2630f81)
+
+#### **Flattened Synthesis view of Multiple modules:**
+``` bash
+$ flatten
+```
+
+#### Output:
+
+![WhatsApp Image 2025-09-27 at 08 31 20_86215c09](https://github.com/user-attachments/assets/23ce9998-2f03-4875-9a9a-9309ca9d4530)
+
+
+### <ins>**Sub-Module Synthesis:**</ins>
+``` bash
+$ synth -top sub_module
+$ abc -liberty /home/aditya/sky130RTLDesignAndSynthesisWorkshop/lib/sky_130_fd_sc_hd__tt_025C_1v80.lib
+$ show
+```
+
+#### Output:
+
+![WhatsApp Image 2025-09-27 at 08 36 13_34c08963](https://github.com/user-attachments/assets/f6673b31-3340-48b2-99e1-9bba45b0f3f0)
+
+## <ins>Types of D Flip-Flops:</ins>
 ### 1. Asynchronous Reset D Flip-Flop:
 
 ```verilog
@@ -48,7 +103,7 @@ $ ./a.out
 $ gtkwave tb_dff_asyncres.vcd
 ```
 
-**Output:**
+#### Output:
 
 ![WhatsApp Image 2025-09-27 at 09 08 22_85533f50](https://github.com/user-attachments/assets/80a4d386-46e6-4f59-802c-f8855552bb41)
 
@@ -59,7 +114,7 @@ $ ./a.out
 $ gtkwave tb_dff_async_set.vcd
 ```
 
-**Output:**
+#### Output:
 
 ![WhatsApp Image 2025-09-27 at 09 11 51_f51082f4](https://github.com/user-attachments/assets/cefba9a0-a276-47e3-a1b5-ded2b20336a1)
 
@@ -69,7 +124,7 @@ $ iverilog dff_syncres.v tb_dff_syncres.v
 $ ./a.out
 $ gtkwave tb_dff_syncres.vcd
 ```
-**Output:**
+#### Output:
 
 ![WhatsApp Image 2025-09-27 at 09 17 16_e0a5309c](https://github.com/user-attachments/assets/4f12cc1e-a069-495d-9403-c40ea2dc655d)
 
@@ -86,7 +141,7 @@ $ abc -liberty /home/aditya/sky130RTLDesignAndSynthesisWorkshop/lib/sky130_fd_sc
 $ show
 ```
 
-**Output:**
+#### Output:
 
 ![WhatsApp Image 2025-09-27 at 12 17 41_a1a3d8c0](https://github.com/user-attachments/assets/c76d9dd5-fa03-41d2-a07c-4ef8f59090c6)
 
@@ -101,7 +156,7 @@ $ abc -liberty /home/aditya/sky130RTLDesignAndSynthesisWorkshop/lib/sky130_fd_sc
 $ show
 ```
 
-**Output:**
+#### Output:
 
 ![WhatsApp Image 2025-09-27 at 12 22 06_e23ce0b4](https://github.com/user-attachments/assets/01d94b54-67c3-4ef1-acf9-006538455421)
 
@@ -116,8 +171,12 @@ $ abc -liberty /home/aditya/sky130RTLDesignAndSynthesisWorkshop/lib/sky130_fd_sc
 $ show
 ```
 
-**Output:**
+#### Output:
 
 ![WhatsApp Image 2025-09-27 at 12 24 26_6ef0528d](https://github.com/user-attachments/assets/091b0e9b-6754-4b29-b0a8-e994c804ba2f)
 
 
+### 🧮 <ins>Interesting Optimization cases:</ins>
+``` bash
+$ gvim mult_*.v -o
+```
