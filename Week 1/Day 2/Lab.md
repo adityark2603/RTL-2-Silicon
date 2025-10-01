@@ -1,5 +1,5 @@
 # RISC-V SoC Tapeout Program VSD
-## Timing Libraries, Synthesis Approaches, and Efficient Flip-Flop Coding ✨
+## ✨ Timing Libraries, Synthesis Approaches, and Efficient Flip-Flop Coding 
 ## 📊 <ins>Hierarchical vs Flat Synthesis</ins> 
 ### <ins>**Multiple Module Synthesis:**</ins>
 ``` bash
