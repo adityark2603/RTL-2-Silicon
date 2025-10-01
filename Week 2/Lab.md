@@ -15,7 +15,7 @@ $ gtkwave output/pre_synth_sim/pre_synth_sim.vcd
 ![pre_synth_sim](https://github.com/user-attachments/assets/faf6b04f-752f-40fe-9882-72cbdda8ae4a)
 
 
-#### Explanation:
+#### <ins>Explanation:</ins> 
 
 The above image represents the simulation results using RTL Verilog code, before hardware synthesis.
 - **CLK** - Input clock of the `RVMYTH` Core. The signal arises from the PLL.
@@ -37,7 +37,7 @@ $ gtkwave output/post_synth_sim/post_synth_sim.vcd
 
 ![post_synth_sim](https://github.com/user-attachments/assets/49f67b8d-0b6c-4feb-8b80-9265b502cdfd)
 
-#### Explanation: 
+#### <ins>Explanation:</ins> 
 
 The above image represents the simulation results after synthesizing the code for a hardware target (e.g., FPGA or ASIC).
 - **\core.CLK** - Input clock of `RVMYTH` Core. The signal arises from the PLL.
@@ -46,5 +46,7 @@ The above image represents the simulation results after synthesizing the code fo
 - **D[9:0]** - The 10-bit output [9:0] port of the `RVMYTH` core. The port arises from the RVMYTH register #17.
 - **OUT** - The real datatype wire that can simulate analog values. The signal comes from the DAC. 
 
+
+<br>
 
 <p align="center"><i>Completed week 2 tasks successfully 🥰🥰🥰</i></p>
