@@ -1,5 +1,5 @@
 # RISC-V SoC Tapeout Program VSD
-## Introduction to Verilog RTL Design & Synthesis ✏️
+## ⌨️ Introduction to Verilog RTL Design & Synthesis️
 ### Simulator:
 RTL Design is checked for adherence to the specifications by simulating the design.  
 **Example:** `iverilog` <br>
