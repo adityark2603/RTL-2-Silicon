@@ -1,5 +1,5 @@
 # RISC-V SoC Tapeout Program VSD
-## Introduction to Verilog RTL Design & Synthesis: ⌨️
+## ⌨️ Introduction to Verilog RTL Design & Synthesis: 
 #### 1. Set up & clone files
 ```bash
 $ git clone https://github.com/kunalg123/sky130RTLDesignAndSynthesisWorkshop.git
