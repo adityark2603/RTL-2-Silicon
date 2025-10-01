@@ -1,6 +1,6 @@
 # RISC-V SoC Tapeout Program VSD 
 
-## Task 1: Introduction Video Summary 📖
+## Introduction Video Summary 📖
 
 ### 1. Chip Modeling (Step O1)  
 - Write a high-level plan of what the chip should do, usually in C language.  
