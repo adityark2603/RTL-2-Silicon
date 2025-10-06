@@ -13,11 +13,11 @@ Gate-Level Simulation is used to verify the functionality of a design after the 
 
 - Critical for Integration: For BabySoC, where multiple complex modules interact, GLS is indispensable for ensuring robust and reliable system-level performance in the final silicon.
 
----
 
-## 🔬 Execution Plan:
-### ⚠️ <ins>IMPORTANT NOTE:</ins>
-Sometimes, `rvmyth.v` isn't available, and only `rvmyth.tlv` is available. In such cases, we can use `Sandpiper-saas` to convert the `.tlv` file to `.v`:
+
+
+#### ⚠️ <ins>IMPORTANT NOTE:</ins>
+Sometimes, only `rvmyth.tlv` is available. In such cases, we can use `Sandpiper-saas` to convert the `.tlv` file to `.v`:
 
 ``` bash
 $ sandpiper-saas -i rvmyth.tlv -o rvmyth.v
@@ -29,7 +29,7 @@ $ sandpiper-saas -i rvmyth.tlv -o rvmyth.v
 
 
 
-
+## 🔬 Execution Plan for Post-Synthesis GLS:
 #### 1. Load Top-level design and supporting modules:
 ``` bash
 $ yosys
@@ -91,7 +91,7 @@ $ stat
 
 ![post_prnt_stat](https://github.com/user-attachments/assets/4e854965-973e-4c56-a1d6-051f5ab63e67)
 
-#### 8. Write Synthesized netlist:
+#### 8. Write a synthesized netlist:
 ``` bash
 $ write_verilog -noattr /home/aditya/VSDBabySoC/output/post_synth_sim/vsdbabysoc.synth.v
 ```
@@ -100,4 +100,29 @@ $ write_verilog -noattr /home/aditya/VSDBabySoC/output/post_synth_sim/vsdbabysoc
 
 ![dumping](https://github.com/user-attachments/assets/19d9c3ae-3d9e-4edc-be53-d7918ee98f2e)
 
+
+## 🌊 Post-Synthesis Gate Level Simulation Results:
+#### 1. Compile Testbench:
+``` bash
+$ iverilog -o /home/aditya/VSDBabySoC/output/post_synth_sim/post_synth_sim.out -DPOST_SYNTH_SIM -DFUNCTIONAL -DUNIT_DELAY=#1 -I /home/aditya/VSDBabySoC/src/include -I /home/aditya/VSDBabySoC/src/module /home/aditya/VSDBabySoC/src/module/testbench.v
+```
+
+#### 2. Navigate to Post-Synthesis Simulation output directory:
+``` bash
+$ cd output/post_synth_sim/
+```
+
+#### 3. Run simulation:
+``` bash
+$ ./post_synth_sim.out
+```
+
+#### 4. View the waveform in gtkwave:
+``` bash
+$ gtkwave post_synth_sim.vcd
+```
+
+#### Output:
+
+![post_synth_gtkwave](https://github.com/user-attachments/assets/565a0fba-5968-4299-b9b0-6f2100d2da58)
 
