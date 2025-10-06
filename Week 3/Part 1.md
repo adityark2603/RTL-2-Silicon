@@ -13,3 +13,91 @@ Gate-Level Simulation is used to verify the functionality of a design after the 
 
 - Critical for Integration: For BabySoC, where multiple complex modules interact, GLS is indispensable for ensuring robust and reliable system-level performance in the final silicon.
 
+---
+
+## 🔬 Execution Plan:
+### ⚠️ <ins>NOTE:</ins>
+Sometimes, `rvmyth.v` isn't available, and only `rvmyth.tlv` is available. In such cases, we can use `Sandpiper-saas` to convert the `.tlv` file to `.v`:
+
+``` bash
+$ sandpiper-saas -i rvmyth.tlv -o rvmyth.v
+```
+
+#### Output:
+
+![conversion of tlv to v](https://github.com/user-attachments/assets/0410bdb6-4c2f-45f0-994e-39d452c047e0)
+
+
+
+
+#### 1. Load Top-level design and supporting modules:
+``` bash
+$ yosys
+$ read_verilog /home/aditya/VSDBabySoC/src/module/vsdbabysoc.v
+$ read_verilog -sv -I /home/aditya/VSDBabySoC/src/include /home/aditya/VSDBabySoC/src/module/rvmyth.v
+$ read_verilog -I /home/aditya/VSDBabySoC/src/include /home/aditya/VSDBabySoC/src/module/clk_gate.v
+```
+
+#### Output:
+
+![loading](https://github.com/user-attachments/assets/c619e0f6-ab29-448e-9521-0ad7e39d9a89)
+
+#### 2. Load liberty files for synthesis:
+``` bash
+$ read_liberty -lib /home/aditya/VSDBabySoC/src/lib/avsdpll.lib
+$ read_liberty -lib /home/aditya/VSDBabySoC/src/lib/avsddac.lib
+$ read_liberty -lib /home/aditya/VSDBabySoC/src/lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+```
+
+#### Output:
+
+![reading lib ](https://github.com/user-attachments/assets/808b9aaf-a6f7-4072-a903-905856b63fa1)
+
+
+#### 3. Run synthesis targeting `vsdbabysoc`:
+``` bash
+$ synth -top vsdbabysoc
+```
+
+#### Output:
+
+![print_stats_vsdbabysoc](https://github.com/user-attachments/assets/95f8dea6-60d1-48b4-9cf3-1d5a9f9b7ff8)
+
+
+#### 4. Mapping DFF to Standard cells:
+``` bash
+$ dfflibmap -liberty /home/aditya/VSDBabySoC/src/lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+```
+
+#### 5. Perform Optimisation and Technology mapping:
+``` bash
+$ opt
+$ abc -liberty /home/aditya/VSDBabySoC/src/lib/sky130_fd_sc_hd__tt_025C_1v80.lib -script +strash;scorr;ifraig;retime;{D};strash;dch,-f;map,-M,1,{D}
+```
+#### 6. Perform final clean-up and renaming:
+``` bash
+$ flatten
+$ setundef -zero
+$ clean -purge
+$ rename -enumerate
+```
+
+#### 7. Check Statistics:
+``` bash
+$ stat
+```
+
+#### Output:
+
+![post_prnt_stat](https://github.com/user-attachments/assets/4e854965-973e-4c56-a1d6-051f5ab63e67)
+
+#### 8. Write Synthesized netlist:
+``` bash
+$ write_verilog -noattr /home/aditya/VSDBabySoC/output/post_synth_sim/vsdbabysoc.synth.v
+```
+
+#### Output:
+
+![dumping](https://github.com/user-attachments/assets/19d9c3ae-3d9e-4edc-be53-d7918ee98f2e)
+
+
