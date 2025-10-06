@@ -16,7 +16,7 @@ Gate-Level Simulation is used to verify the functionality of a design after the 
 ---
 
 ## 🔬 Execution Plan:
-### ⚠️ <ins>NOTE:</ins>
+### ⚠️ <ins>IMPORTANT NOTE:</ins>
 Sometimes, `rvmyth.v` isn't available, and only `rvmyth.tlv` is available. In such cases, we can use `Sandpiper-saas` to convert the `.tlv` file to `.v`:
 
 ``` bash
