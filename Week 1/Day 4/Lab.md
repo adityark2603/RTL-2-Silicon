@@ -77,7 +77,7 @@ $ abc -liberty /home/aditya/sky130RTLDesignAndSynthesisWorkshop/lib/sky130_fd_sc
 ```
 
 ##### Output:
-<img width="1024" height="1024" alt="ChatGPT Image Oct 11, 2025, 09_49_52 AM" src="https://github.com/user-attachments/assets/2dfb62a3-00e6-47f3-9809-18c0deda6b17" />
+<img width="425" height="257" alt="image" src="https://github.com/user-attachments/assets/7c1e6fe9-ec7b-4d74-aca4-86eef14f5acb" />
 
 
 
@@ -93,6 +93,61 @@ $ write_verilog -noattr bad_mux_net.v
 ``` bash
 $ show
 ```
+##### Output:
+![bad mux diagram](https://github.com/user-attachments/assets/efb5eae4-40b6-42f8-ad78-5fce4e0d0a8a)
 
+
+#### Gate Level Simulation:
+``` bash
+$ iverilog home/aditya/sky130RTLDesignAndSynthesisWorkshop/my_lib/verilog_model/primitives.v /home/aditya/sky130RTLDesignAndSynthesisWorkshop/my_lib/verilog_model/sky130_fd_sc_hd.v bad_mux_net.v tb_bad_mux.v
+$ ./a.out
+$ gtkwave tb_bad_mux_net.vcd
+```
+
+##### Output:
+![gls bad mux](https://github.com/user-attachments/assets/b8098383-220e-4b6a-9117-165699e72e8c)
+
+### 3. <ins>blocking_caveat.v</ins>
+#### Verilog file:
+![blocking caveat code](https://github.com/user-attachments/assets/4319c8bc-aa77-439c-83d3-2a493dd824aa)
+
+#### GTK Wave:
+``` bash
+$ iverilog blocking_caveat.v tb_blocking_caveat.v
+$ ./a.out
+$ gtkwave tb_blocking_caveat.vcd
+```
+
+##### Output:
+![blocking caveat gtkwave](https://github.com/user-attachments/assets/8ee83e18-9e41-41d4-b6a1-d68c9ed40eb9)
+
+#### Statistics: 
+``` bash
+$ yosys
+$ read_liberty -lib /home/aditya/sky130RTLDesignAndSynthesisWorkshop/lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+$ read_verilog blocking_caveat.v
+$ synth -top blocking_caveat
+$ abc -liberty /home/aditya/sky130RTLDesignAndSynthesisWorkshop/lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+```
+##### Output:
+<img width="441" height="275" alt="image" src="https://github.com/user-attachments/assets/e173e672-b076-47ff-96db-405f0cb02f62" />
+
+#### Realisation of logic:
+``` bash
+$ show
+```
+
+##### Output:
+![blocking caveat diagram](https://github.com/user-attachments/assets/d6636baf-b857-4b42-8411-105b8502b767)
+
+#### Gate Level Simulation:
+``` bash
+$ iverilog home/aditya/sky130RTLDesignAndSynthesisWorkshop/my_lib/verilog_model/primitives.v /home/aditya/sky130RTLDesignAndSynthesisWorkshop/my_lib/verilog_model/sky130_fd_sc_hd.v blocking_caveat_net.v tb_blocking_caveat.v
+$ ./a.out
+$ gtkwave tb_blocking_caveat_net.vcd
+```
+
+###### Output:
+![blocking caveat gls](https://github.com/user-attachments/assets/fee852cb-83e8-461a-b3e2-1472a451e1ee)
 
 
