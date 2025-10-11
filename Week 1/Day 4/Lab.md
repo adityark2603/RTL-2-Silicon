@@ -3,11 +3,8 @@
 
 ### 1. <ins>ternary_operator</ins>
 #### Verilog File:
-``` verilog
-module ternary_operator_mux (input i0, input i1, input sel, output y);
-    assign y = sel?i1:i0;
-    endmodule
-```
+![ternary_operator_mux code ](https://github.com/user-attachments/assets/65b6abf5-86fd-4ebb-bac4-3960049c4b2b)
+
 #### GTK Wave:
 ``` bash
 $ iverilog ternary_operator_mux.v tb_ternary_operator_mux.v
@@ -58,4 +55,44 @@ $ gtkwave tb_ternary_operator_mux_net.vcd
 
 ### 2. <ins>bad_mux</ins>
 #### Verilog file:
+<img width="722" height="290" alt="image" src="https://github.com/user-attachments/assets/3c21ffdc-622f-4981-a640-82a0fd785be8" />
+
+#### GTK Wave:
+``` bash
+$ iverilog bad_mux.v tb_bad_mux.v
+$ ./a.out
+$ gtkwave tb_bad_mux.vcd
+```
+
+##### Output:
+![tb_bad_mux gtkwave](https://github.com/user-attachments/assets/3e127d87-b360-4716-8ff1-829f78bdbf55)
+
+#### Statistics: 
+``` bash
+$ yosys
+$ read_liberty -lib /home/aditya/sky130RTLDesignAndSynthesisWorkshop/lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+$ read_verilog bad_mux.v
+$ synth -top bad_mux
+$ abc -liberty /home/aditya/sky130RTLDesignAndSynthesisWorkshop/lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+```
+
+##### Output:
+<img width="1024" height="1024" alt="ChatGPT Image Oct 11, 2025, 09_49_52 AM" src="https://github.com/user-attachments/assets/2dfb62a3-00e6-47f3-9809-18c0deda6b17" />
+
+
+
+#### Write the netlist file:
+```bash
+$ write_verilog -noattr bad_mux_net.v
+```
+
+##### Output:
+<img width="1275" height="695" alt="image" src="https://github.com/user-attachments/assets/104d1d3a-9e13-4ab9-a469-6cf50cd416a1" />
+
+#### Realisation of logic:
+``` bash
+$ show
+```
+
+
 
