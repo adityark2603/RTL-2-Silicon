@@ -164,4 +164,4 @@ $ show
 ![counter_opt2_diagram](https://github.com/user-attachments/assets/1c0171f6-2d7b-4f00-a676-597bc7e82103)
 
 
-<p align="center"><i>Completed Day 3 tasks successfully 🥰🥰🥰</i></p>
+
