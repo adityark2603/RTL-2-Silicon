@@ -237,4 +237,4 @@ $ !gvim mult8_net.v
 
 
 
-<p align="center"><i>Completed Day 2 tasks successfully 🥰🥰🥰</i></p>
+
