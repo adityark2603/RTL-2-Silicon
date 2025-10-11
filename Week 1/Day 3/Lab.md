@@ -18,6 +18,7 @@ $ show
 
 ##### Realisation of logic:
 ![opt_check1_diagram](https://github.com/user-attachments/assets/f865104b-1c08-453c-bb12-ef2a36789dfc)
+---
 
 #### 2. <ins>opt_check2.v</ins>
 ##### Verilog file:
@@ -25,6 +26,7 @@ $ show
 
 ##### Realisation of logic:
 ![opt_check2_diagram](https://github.com/user-attachments/assets/d05d112e-9c6d-4103-9f83-b0ef257870af)
+---
 
 #### 3. <ins>opt_check3.v</ins>
 ##### Verilog file:
@@ -32,6 +34,7 @@ $ show
 
 ##### Realisation of logic:
 ![opt_check3_diagram](https://github.com/user-attachments/assets/32abb3be-e1db-4bb5-936f-c3b9e9e2e273)
+---
 
 #### 4. <ins>opt_check4.v</ins>
 ##### Verilog file:
@@ -39,6 +42,7 @@ $ show
 
 ##### Realisation of logic:
 ![opt_check4_diagram](https://github.com/user-attachments/assets/979410ad-066a-4d80-b506-c3763f6b52ce)
+---
 
 
 ### 🌙 <ins>Sequential Logic Optimization:</ins>
@@ -68,6 +72,7 @@ $ show
 
 ##### Realisation of logic:
 ![dff_const1_diagram](https://github.com/user-attachments/assets/7655e180-9a7e-4c61-83f9-3dbf79bc6d45)
+---
 
 #### 2. <ins>dff_const2.v</ins>
 ##### Verilog file:
@@ -81,6 +86,7 @@ $ show
 
 ##### Realisation of logic:
 ![dff_const2_diagram](https://github.com/user-attachments/assets/33d1fb08-5256-41a7-a7b8-6d83008d3800)
+---
 
 #### 3. <ins>dff_const3.v</ins>
 ##### Verilog file:
@@ -94,6 +100,7 @@ $ show
 
 ##### Realisation of logic:
 ![dff_const3_diagram](https://github.com/user-attachments/assets/25101b04-4e9c-482c-8474-2d6d7010febd)
+---
 
 #### 4. <ins>dff_const4.v</ins>
 ##### Verilog file:
@@ -107,6 +114,7 @@ $ show
 
 ##### Realisation of logic:
 ![dff_const4_diagram](https://github.com/user-attachments/assets/f29bb1ce-0d21-4f31-a39d-aabf4b2654c1)
+---
 
 #### 5. <ins>dff_const5.v</ins>
 ##### Verilog file:
@@ -120,3 +128,40 @@ $ show
 
 ##### Realisation of logic:
 ![dff_const5_diagram](https://github.com/user-attachments/assets/576e6388-0cb2-46f2-a194-380535f8359e)
+---
+
+### 🪐 <ins>Sequential Unused Output Optimization:</ins>
+
+``` bash
+$ gvim counter_opt.v
+$ yosys
+$ $ read_liberty -lib /home/aditya/sky130RTLDesignAndSynthesisWorkshop/lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+$ read_verilog counter_opt.v
+$ synth -top counter_opt
+$ opt_clean -purge
+$ abc -liberty /home/aditya/sky130RTLDesignAndSynthesisWorkshop/lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+$ show
+```
+#### 1. <ins>counter_opt.v</ins>
+##### Verilog file:
+![counter_opt_code](https://github.com/user-attachments/assets/59b68c6a-617e-435e-babe-8ec0fda81cac)
+
+##### Statistics:
+![printiing_stats_counter_opt](https://github.com/user-attachments/assets/12b3c7a6-b0ab-4ebb-b745-800403f1ed0a)
+
+##### Realisation of logic:
+![counter_opt_diagram](https://github.com/user-attachments/assets/e95c297a-46a6-4f11-aec2-38592d5fd2c7)
+
+
+#### 2. <ins>counter_opt2.v</ins>
+##### Verilog file:
+![code_counter_opt2](https://github.com/user-attachments/assets/21466112-51ac-4faa-b4f6-35943564be97)
+
+##### Statistics:
+![printiing_stats_counter_opt2](https://github.com/user-attachments/assets/c737293c-2095-4342-bc88-f82697db24ac)
+
+##### Realisation of logic:
+![counter_opt2_diagram](https://github.com/user-attachments/assets/1c0171f6-2d7b-4f00-a676-597bc7e82103)
+
+
+<p align="center"><i>Completed Day 3 tasks successfully 🥰🥰🥰</i></p>
