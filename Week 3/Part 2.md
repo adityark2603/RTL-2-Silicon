@@ -174,13 +174,14 @@ Jitter in a network context refers to the variation in the timing of signal tran
 
 <img width="3839" height="2090" alt="20" src="https://github.com/user-attachments/assets/cb6679ca-f242-470c-88e0-3d96229f5db0" />
 
-<br>
+**Setup analysis:**
 
 ![21](https://github.com/user-attachments/assets/fc5ada3c-dece-4953-aa88-ed6cba4cffc3)
 
 
+**Hold Analysis:**
+![22](https://github.com/user-attachments/assets/95bee6ee-b282-4bef-a1d7-a38a7e7e90f1)
 
-![22](https://github.com/user-attachments/assets/fe24d471-783f-4712-af56-bfc739ddc60d)
 
 
 #### <ins>Sources of Variation:</ins>
@@ -215,9 +216,6 @@ tₚᴅ = f(R) = f(Iᴅ) = f(tₒₓ, W, L)
 
 
 #### <ins>On-Chip Variation (OCV) and Pessimism Removal:</ins>
-#### OCV-Based Setup Timing Analysis:  
-Applies derating factors to account for delay variations across the chip, ensuring conservative setup margins.
-
 #### Setup Timing After Pessimism Removal:
 Removes excessive pessimism in correlated clock paths for realistic timing results.
 
@@ -235,7 +233,6 @@ Refines hold margins by eliminating unnecessary pessimism between correlated dat
 ![30](https://github.com/user-attachments/assets/12f35343-1c3f-4c18-a83f-2c43c9b02a66)
 
 
-### 🏅<ins>Course Completion Certificate:</ins>
-![VSD-STA](https://github.com/user-attachments/assets/da5d256e-c914-4175-8135-fe4c3fa9ed26)
+
 
 
