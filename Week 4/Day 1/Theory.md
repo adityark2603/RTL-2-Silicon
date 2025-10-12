@@ -102,4 +102,37 @@ $$
 
 <img width="1672" height="887" alt="image" src="https://github.com/user-attachments/assets/41e6c87f-22f0-425f-838f-12a6d427a0b4" />
 
+### 🌶️ <ins>SPICE Simulations:</ins>
+**SPICE** - Simulation Program with Integrated Circuit Emphasis
 
+<img width="1740" height="900" alt="image" src="https://github.com/user-attachments/assets/7b85e4be-2f63-4ceb-a994-bd513d441bc3" />
+
+
+The fundamental NMOS SPICE parameters are:
+
+$$
+V_{t0},\quad k_n,\quad \gamma,\quad \mu_n,\quad C_{ox},\quad \frac{W}{L}, \quad \lambda
+$$
+
+SPICE simulation involves using extracted device parameters to generate a netlist, which is then processed by the simulation engine to numerically solve circuit equations and produce characteristic waveforms and data.
+
+SPICE Netlist for the given diagram:
+<img width="795" height="487" alt="image" src="https://github.com/user-attachments/assets/4fc554e4-fb2b-4eba-963f-4a7fdfa938b1" />
+
+``` bash
+# SPICE Netlist Generated for MOSFET Circuit
+
+* Generated SPICE Netlist
+M1 vdd n1 0 0 nmos W=1.8u L=1.2u
+R1 in n1 55
+Vdd vdd 0 DC 2.5  
+Vin in 0 DC 2.5
+
+.MODEL nmos NMOS (VTO=0.7 KP=120U GAMMA=0.5)
+
+.OP
+.DC Vin 0 2.5 0.01
+.PRINT DC V(n1) I(R1)
+.END
+EOF
+```
