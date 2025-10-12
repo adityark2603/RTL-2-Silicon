@@ -38,11 +38,45 @@ Applying a positive bias to the substrate (body) in an n-channel MOSFET increase
 ![2](https://github.com/user-attachments/assets/12fe3143-1d80-4a28-b343-d2fca1e98e98)
 
 #### <ins>Some Important Terms:</ins>
-1. <ins>Strong Inversion</ins>
+1. **Strong Inversion:**
 Strong inversion refers to the condition when the gate voltage exceeds the threshold voltage, causing a large number of electrons to form a conducting n-channel under the gate oxide, allowing significant current to flow from source to drain.​​
 
-2. <ins>Subthreshold Conduction</ins>
+2. **Subthreshold Conduction:**
 Subthreshold conduction is the phenomenon where a MOSFET conducts a small leakage current even when the gate voltage is below the threshold voltage, due to minority carriers moving across the channel; this current increases exponentially as the gate voltage approaches the threshold voltage.
+
+#### <ins>Threshold Voltage Equation:</ins>
+$$
+V_t = V_{t0} + \gamma \left( \sqrt{|{-2\phi_F + V_{SB}}|} - \sqrt{|{-2\phi_F}|} \right)
+$$
+
+<img width="1772" height="912" alt="image" src="https://github.com/user-attachments/assets/e8d51a86-8a7b-4854-9266-20ef361b8a4c" />
+
+### <ins>NMOS in Resistive Operation (Triode Region):</ins>
+In the **triode region**, the NMOS transistor acts like a **voltage-controlled resistor**.
+The drain current Id is given by:
+
+$$ I_D = \frac{1}{2} \mu_n C_{ox} \frac{W}{L} (V_{GS} - V_{th})^2 $$
+
+
+For **small $$\(V_{DS}\)$$**, (when $$\(V_{DS}\ll V_{GS} - V_{th}\))$$, the quadratic term is negligible:
+
+$$
+I_D \approx \mu_n C_{ox} \frac{W}{L} (V_{GS} - V_{th}) V_{DS}
+$$
+
+### <ins>Effective Resistance:</ins>
+
+Comparing with Ohm’s law $$\(I = \frac{V}{R}\)$$, the effective **on-resistance** $$\(R_{on}\)$$ of the NMOS is:
+
+$$
+R_{on} = \frac{1}{\mu_n C_{ox} \frac{W}{L} (V_{GS} - V_{th})}
+$$
+
+
+
+
+
+
 
 
 
