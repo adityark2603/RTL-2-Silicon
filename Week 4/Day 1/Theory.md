@@ -6,7 +6,7 @@
 
 SPICE simulations are essential for designing and analyzing electronic circuits before physical implementation. They help engineers predict circuit behavior, identify design flaws, and optimize performance without needing costly or time-consuming prototypes. SPICE allows simulation of analog, digital, and mixed-signal circuits, enabling accurate prediction of voltage, current, power, and signal behavior under various conditions.
 
-### ⚛ <isn>NMOS Device:</ins> 
+### ⚛ <ins>NMOS Device:</ins> 
 n-Channel Metal Oxide Semiconductor (NMOS) Characteristics:
 
 1. The NMOS transistor has four terminals—Gate (G), Source (S), Drain (D), and Body/Substrate (B). Each serves a distinct function in device operation.
