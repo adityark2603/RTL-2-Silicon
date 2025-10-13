@@ -27,10 +27,12 @@
 </p>
 
 
-#### <ins>Quadratic Dependance:</ins>
+#### ✨ <ins>Quadratic Dependance:</ins>
 When $V_{GS}$ increases above the threshold voltage $V_T$, an inversion channel of electrons forms under the MOS gate.
 
-Mathematically*
-​
+Mathematically:
+​<br>
+<p align="center">
 $$I_D \propto (V_{GS} - V_T)^2$$
+</p>
 
