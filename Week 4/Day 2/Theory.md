@@ -1,9 +1,9 @@
 # 🌍 RISC-V SoC Tapeout Program VSD
 ## 🖥️ Velocity Saturation and Basics of CMOS inverter VTC
 ### <ins>SPICE Simulation for lower nodes and velocity saturation effect: </ins>
-<img width="1547" height="825" alt="image" src="https://github.com/user-attachments/assets/cd5498e3-d5c4-4de0-b666-6eb658a7fe78" />
+<img width="2602" height="1730" alt="image" src="https://github.com/user-attachments/assets/97ce8575-fd6a-4071-b149-a3697ba50085" />
 
-<br>
+---
 
 1. **<ins>Linear region:</ins>**
   	- MOSFET behaves like a voltage-controlled resistor
@@ -27,7 +27,7 @@
 </p>
 
 
-#### ✨ <ins>Quadratic Dependance:</ins>
+### <ins>Quadratic Dependance:</ins>
 When $V_{GS}$ increases above the threshold voltage $V_T$, an inversion channel of electrons forms under the MOS gate.
 
 Mathematically:
@@ -36,3 +36,12 @@ Mathematically:
 $$I_D \propto (V_{GS} - V_T)^2$$
 </p>
 
+
+### <ins>Velocity Saturation:</ins>
+Velocity saturation occurs when carrier velocity stops increasing with the electric field. This limits the current below the square-law model prediction at high fields.
+
+Mathematically:
+<br>
+<p align="center">
+$$I_{Dsat} = W C_{ox} (V_{GS} - V_T) v_{sat}$$
+</p>
