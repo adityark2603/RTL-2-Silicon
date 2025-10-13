@@ -3,7 +3,7 @@
 ### <ins>SPICE Simulation for lower nodes and velocity saturation effect: </ins>
 <img width="1547" height="825" alt="image" src="https://github.com/user-attachments/assets/cd5498e3-d5c4-4de0-b666-6eb658a7fe78" />
 
-
+<br>
 
 1. **<ins>Linear region:</ins>**
   	- MOSFET behaves like a voltage-controlled resistor
@@ -16,7 +16,7 @@
 </p>
 
 
-2. **<ins>Saturation Region:</ins>**
+2. **<ins>Saturation region:</ins>**
    - MOSFET behaves like a current source
    - Condition:
      $$V_{DS} \geq V_{GS} - V_T$$
@@ -26,4 +26,11 @@
 	​
 </p>
 
+
+#### <ins>Quadratic Dependance:</ins>
+When $V_{GS}$ increases above the threshold voltage $V_T$, an inversion channel of electrons forms under the MOS gate.
+
+Mathematically*
+​
+$$I_D \propto (V_{GS} - V_T)^2$$
 
