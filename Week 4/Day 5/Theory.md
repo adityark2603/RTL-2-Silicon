@@ -4,14 +4,13 @@
 #### <ins>Key Learnings:</ins>
 1. **Technology Scaling**: Moving from 250nm to lower nodes (e.g., 20nm) requires supply voltage scaling (e.g., 1V → 0.7V)
 2. **CMOS inverters can operate at 0.5V** with trade-offs:<br>
-1) Advantages:
-      - **50% improvement** in gain
-      - **90% reduction** in energy consumption<br>
-2) Disadvantages:
-      - **Performance impact** due to insufficient voltage for complete capacitance charging/discharging
+      1) Advantages:
+            - **50% improvement** in gain
+            - **90% reduction** in energy consumption<br>
+      2) Disadvantages:
+            - **Performance impact** due to insufficient voltage for complete capacitance charging/discharging
 
 ### 〰️ <ins>Device Variation:</ins>
-
 #### <ins>Sources of Variation:</ins>
 
 #### 1. Etching Process Variation
