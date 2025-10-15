@@ -3,6 +3,8 @@
 #### **What is Gate Level Simulation?** <br>
 Running the testbench against the synthesized netlist output as a DUT is known as Gate Level Simulation (GLS). The output netlist should logically be the same as the RTL code so that the testbench will align itself when we simulate both files to obtain the waveforms.
 
+<img width="591" height="207" alt="image" src="https://github.com/user-attachments/assets/e06fc49b-c3ae-46e5-be06-6908061395d6" />
+
 #### **Advantages of GLS:**
 1. To logically verify the correctness of the design after Synthesis <br>
 2. During RTL Simulation, timing was not accounted for, but for practical applications, there is a need to ensure the timing of the design is met
