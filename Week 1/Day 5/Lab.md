@@ -332,6 +332,12 @@ $ synth -top rca
 $ abc -liberty /home/aditya/sky130RTLDesignAndSynthesisWorkshop/lib/sky130_fd_sc_hd__tt_025C_1v80.lib
 ```
 
+##### Output:
+
+![print_stats_rca (1)](https://github.com/user-attachments/assets/0a210e2f-5563-4ccf-bcc0-767c6b92e6bd)
+
+
+
 #### Realisation of Logic:
 ``` bash
 $ show
@@ -339,7 +345,7 @@ $ show
 
 ##### Output:
 
-<img width="1080" height="980" alt="diagram_rca" src="https://github.com/user-attachments/assets/48d8a272-0231-4b1c-919f-564a99387ff6" />
+<img width="1080" height="980" alt="diagram_rca" src="https://github.com/user-attachments/assets/48d8a272-0231-4b1c-919f-564a99387ff6" /> <br>
 
 <img width="1337" height="420" alt="diagram_fa" src="https://github.com/user-attachments/assets/b6f3527a-7828-420a-be5c-b72c800abdf1" />
 
