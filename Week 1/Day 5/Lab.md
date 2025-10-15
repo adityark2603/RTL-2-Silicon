@@ -193,3 +193,155 @@ $ show
 ### <ins>Mux_Generate Statement:</ins>
 #### Verilog file:
 
+![mux_generate_code](https://github.com/user-attachments/assets/c4607f00-606e-4660-8e4c-de1f074e1846)
+
+
+#### GTK Wave:
+``` bash
+$ iverilog mux_generate.v tb_mux_generate.v
+$ ./a.out
+$ gtkwave tb_mux_generate.vcd
+```
+
+##### Output:
+
+![tb_mux_generate_gtkwave](https://github.com/user-attachments/assets/e21302fe-9fe0-4b74-bd92-7555cfcd9d1b)
+
+#### Statistics:
+``` bash
+$ yosys
+$ read_liberty -lib /home/aditya/sky130RTLDesignAndSynthesisWorkshop/lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+$ read_verilog mux_generate.v
+$ synth -top mux_generate
+$ abc -liberty /home/aditya/sky130RTLDesignAndSynthesisWorkshop/lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+```
+
+##### Output:
+
+![print_stats_mux generate](https://github.com/user-attachments/assets/0d52e010-9d0f-4094-bf9a-572d1457f721)
+
+
+#### Realisation of Logic:
+``` bash
+$ show
+```
+
+##### Output:
+
+![diagram_mux generate](https://github.com/user-attachments/assets/c70ca020-7479-4b41-b431-bfaa53b6dfd5)
+
+### <ins>Demux_Case Statement:</ins>
+#### Verilog file:
+
+![demux_case_code](https://github.com/user-attachments/assets/0d234ff0-9f80-4ded-875b-5c77bee1a537)
+
+#### GTK Wave:
+``` bash
+$ iverilog demux_case.v tb_demux_case.v
+$ ./a.out
+$ gtkwave tb_demux_case.vcd
+```
+
+##### Output:
+
+![tb_demux_case_gtkwave](https://github.com/user-attachments/assets/47115bc6-f35e-4735-9915-b587f484fd95)
+
+#### Statistics:
+``` bash
+$ yosys
+$ read_liberty -lib /home/aditya/sky130RTLDesignAndSynthesisWorkshop/lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+$ read_verilog demux_case.v
+$ synth -top demux_case
+$ abc -liberty /home/aditya/sky130RTLDesignAndSynthesisWorkshop/lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+```
+
+##### Output:
+
+![print_stats_demux_case](https://github.com/user-attachments/assets/4564a21d-05d6-4106-824e-c57e4401799e)
+
+
+#### Realisation of Logic:
+``` bash
+$ show
+```
+
+##### Output:
+
+![diagram_demux case](https://github.com/user-attachments/assets/419a36f5-44ed-4ed6-ab8d-ec6d507609c2)
+
+### <ins>Demux_Generate Statement:</ins>
+#### Verilog file:
+
+![demux_generate_code](https://github.com/user-attachments/assets/d58c9b39-265a-46d7-8b82-03491a27db01)
+
+#### GTK Wave:
+``` bash
+$ iverilog demux_generate.v tb_demux_generate.v
+$ ./a.out
+$ gtkwave tb_demux_generate.vcd
+```
+
+##### Output:
+
+![tb_demux_generate_gtkwave](https://github.com/user-attachments/assets/a71a5ab9-03b7-4846-8925-3459c92d1c56)
+
+
+#### Statistics:
+``` bash
+$ yosys
+$ read_liberty -lib /home/aditya/sky130RTLDesignAndSynthesisWorkshop/lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+$ read_verilog demux_generate.v
+$ synth -top demux_generate
+$ abc -liberty /home/aditya/sky130RTLDesignAndSynthesisWorkshop/lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+```
+##### Output:
+
+![print_stats_demux_generate](https://github.com/user-attachments/assets/6d1bb19b-aac6-435a-ace3-5673a2d327be)
+
+#### Realisation of Logic:
+``` bash
+$ show
+```
+
+##### Output:
+
+![diagram_demux generate](https://github.com/user-attachments/assets/fa62de15-184b-45a0-ae5a-bdac302b9749)
+
+### <ins>Ripple Carry Adder:</ins>
+#### Verilog File:
+
+![rca_code](https://github.com/user-attachments/assets/e2bde70b-e06d-47e8-b333-dd1c21f2c83b)
+
+#### GTK Wave:
+``` bash
+$ iverilog rca.v tb_rca.v
+$ ./a.out
+$ gtkwave tb_rca.vcd
+```
+
+##### Output:
+
+![tb_rca_gtkwave](https://github.com/user-attachments/assets/cf58e08d-f2f1-4b63-b0ea-78998ee0167d)
+
+#### Statistics:
+``` bash
+$ yosys
+$ read_liberty -lib /home/aditya/sky130RTLDesignAndSynthesisWorkshop/lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+$ read_verilog rca.v
+$ synth -top rca
+$ abc -liberty /home/aditya/sky130RTLDesignAndSynthesisWorkshop/lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+```
+
+#### Realisation of Logic:
+``` bash
+$ show
+```
+
+##### Output:
+
+<img width="1080" height="980" alt="diagram_rca" src="https://github.com/user-attachments/assets/48d8a272-0231-4b1c-919f-564a99387ff6" />
+
+<img width="1337" height="420" alt="diagram_fa" src="https://github.com/user-attachments/assets/b6f3527a-7828-420a-be5c-b72c800abdf1" />
+
+
+
