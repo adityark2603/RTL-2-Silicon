@@ -334,7 +334,9 @@ $ abc -liberty /home/aditya/sky130RTLDesignAndSynthesisWorkshop/lib/sky130_fd_sc
 
 ##### Output:
 
-![print_stats_rca (1)](https://github.com/user-attachments/assets/0a210e2f-5563-4ccf-bcc0-767c6b92e6bd)
+![print_stats_rca (2)](https://github.com/user-attachments/assets/38d62dd9-4b35-4c0c-9166-ebfc86ffc299)
+
+
 
 
 
