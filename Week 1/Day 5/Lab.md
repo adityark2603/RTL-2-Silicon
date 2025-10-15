@@ -122,4 +122,74 @@ $ show
 
 
 
+### <ins>Complete_Case Statement:</ins>
+#### Verilog file:
+
+![comp_case_code](https://github.com/user-attachments/assets/7b1920cc-7c51-4ec8-a4b3-03912658a929)
+
+#### GTK Wave:
+``` bash
+$ iverilog comp_case.v tb_comp_case.v
+$ ./a.out
+$ gtkwave tb_comp_case.vcd
+```
+
+##### Output:
+
+![tb_comp_case_gtkwave](https://github.com/user-attachments/assets/69fbed86-ce95-469c-8271-ed3ca4d080a5)
+
+#### Statistics:
+``` bash
+$ yosys
+$ read_liberty -lib /home/aditya/sky130RTLDesignAndSynthesisWorkshop/lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+$ read_verilog comp_case.v
+$ synth -top comp_case
+$ abc -liberty /home/aditya/sky130RTLDesignAndSynthesisWorkshop/lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+```
+
+##### Output:
+
+![print_stats_comp_case](https://github.com/user-attachments/assets/61bcec53-455e-4f6a-b733-d36e35e0f4c3)
+
+#### Realisation of Logic:
+``` bash
+$ show
+```
+
+##### Output:
+
+![diagram_comp_case](https://github.com/user-attachments/assets/69aeb332-bfda-4dd9-9ca2-6c06ce5ae78f)
+
+### <ins>Partial_Case Statement:</ins>
+#### Verilog file:
+
+![partial_case_code](https://github.com/user-attachments/assets/f830ac59-4ba3-4308-a11d-c6148471f13a)
+
+#### Statistics:
+``` bash
+$ yosys
+$ read_liberty -lib /home/aditya/sky130RTLDesignAndSynthesisWorkshop/lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+$ read_verilog partial_case.v
+$ synth -top partial_case
+$ abc -liberty /home/aditya/sky130RTLDesignAndSynthesisWorkshop/lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+```
+
+##### Output:
+
+![print_stats_partial case assign](https://github.com/user-attachments/assets/fd215610-c2a4-439f-809e-96061d912671)
+
+
+
+#### Realisation of Logic:
+``` bash
+$ show
+```
+
+##### Output:
+
+![diagram_partial_case_assign](https://github.com/user-attachments/assets/2b5b1871-fe23-4b34-aaca-f7c2c19d9c3f)
+
+
+### <ins>Mux_Generate Statement:</ins>
+#### Verilog file:
 
