@@ -72,6 +72,6 @@ I am grateful to [**Kunal Ghosh**](https://github.com/kunalg123) and Team **[VLS
 ![Week 0](https://img.shields.io/badge/Week%200-Tools%20Setup_and_Installation-success?style=flat-square)
 ![Week 1](https://img.shields.io/badge/Week%201-Verilog_RTL_Design_&_Synthesis-success?style=flat-square)
 ![Week 2](https://img.shields.io/badge/Week%202-BabySoC_Fundamentals_&_Functional_Modelling-success?style=flat-square)
-![Week 3](https://img.shields.io/badge/Week%203-Post-Synthesis_GLS_&_STA_Fundamentals-success?style=flat-square)
+![Week 3](https://img.shields.io/badge/Week%203-Post_Synthesis_GLS_&_STA_Fundamentals-success?style=flat-square)
 ![Week 4](https://img.shields.io/badge/Week%204-CMOS_Circuit_Design-success?style=flat-square)
 
