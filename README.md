@@ -17,14 +17,14 @@ Welcome to my journey through the RISC-V SoC Tapeout program VSD!!! 🥰🥰
 
 <br>
 
-## ⌛ Week 0 - Initial Setup & Tools Installation
+## ⌛ [Week 0](https://github.com/adityark2603/RTL-2-Silicon/tree/main/Week%200) - Initial Setup & Tools Installation
 ### <ins>Key Learnings from Week 0: </ins>
   1. Successfully installed & verified **open-source EDA tools** ecosystem
   2. Learnt about **basic environment setup** for RTL design & synthesis
   3. Prepared for upcoming **RTL ➡️ GSIII** flow projects
 <br>
 
-## 📌 Week 1 - Verilog RTL Design & Synthesis
+## 📌 [Week 1](https://github.com/adityark2603/RTL-2-Silicon/tree/main/Week%201) - Verilog RTL Design & Synthesis
 ### <ins>Key Learnings from Week 1: </ins>
   1. Understood RTL design flow and Verilog-to-hardware synthesis.
   2. Learned the role of timing libraries (.lib) in defining delays and constraints.
@@ -33,7 +33,7 @@ Welcome to my journey through the RISC-V SoC Tapeout program VSD!!! 🥰🥰
   5. Gained experience with Gate Level Simulation and post-synthesis verification.
 <br>
 
-## 🔨 Week 2 - BabySoC — Fundamentals of SoC Design & Functional Modelling
+## 🔨 [Week 2](https://github.com/adityark2603/RTL-2-Silicon/tree/main/Week%202) - BabySoC — Fundamentals of SoC Design & Functional Modelling
 ### <ins>Key Learnings from Week 2: </ins>
   1. Understood the basic architecture and components of a System-on-Chip (SoC).
   2. Learned how different modules like CPU, memory, and peripherals interact within an SoC.
@@ -42,7 +42,7 @@ Welcome to my journey through the RISC-V SoC Tapeout program VSD!!! 🥰🥰
   5. Understood the importance of modular design and integration in building scalable SoC systems.
 <br>
 
-## 🍼 Week 3 - Post-Synthesis GLS & STA Fundamentals
+## 🍼 [Week 3](https://github.com/adityark2603/RTL-2-Silicon/tree/main/Week%203) - Post-Synthesis GLS & STA Fundamentals
 ### <ins>Key Learnings from Week 3: </ins>
   1. Understood the purpose and workflow of Gate Level Simulation (GLS) for verifying post-synthesis functionality and timing.
   2. Learned the basics of Static Timing Analysis (STA) and how it ensures the design meets setup and hold time requirements.
@@ -51,7 +51,7 @@ Welcome to my journey through the RISC-V SoC Tapeout program VSD!!! 🥰🥰
   5. Understood the importance of GLS and STA in achieving reliable, timing-accurate digital designs.
 <br>
 
-## 🍼 Week 4 - CMOS Circuit Design
+## 🍼 [Week 4](https://github.com/adityark2603/RTL-2-Silicon/tree/main/Week%204) - CMOS Circuit Design
 ### <ins>Key Learnings from Week 4: </ins>
   1. Understood NMOS I–V characteristics and how current varies across different operating regions.
   2. Learned about velocity saturation and its influence on short-channel transistor behavior.
