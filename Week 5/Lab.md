@@ -39,12 +39,6 @@ $ nano src/CMakeLists.txt
 ```
 2.  **Find and comment out** the existing `find_package` line for `spdlog`. This is done because we'll be building `spdlog` as a dependency target rather than relying on a system-wide package.
 
-```cmake
-# find_package(spdlog REQUIRED)
-```
-<ins>**NOTE**</ins>: Ensure a `#` is placed at the beginning of the line.
-
-
 
 **<ins>Part B</ins>:** Patch Root `CMakeLists.txt`
 
