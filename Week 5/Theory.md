@@ -55,6 +55,6 @@ Placement is the process of arranging **standard cells** and smaller blocks with
    * Remove overlaps and adhere strictly to placement grids and design rules.
    * Maintain wire length optimization from global placement.
 
-#### <ins>📊 Process Flow:</ins>
+#### 📊  <ins>Process Flow:</ins>
 <img width="1536" height="1024" alt="image" src="https://github.com/user-attachments/assets/4bcd3b87-104d-4a2a-a5da-41ab5f003bdc" />
 
