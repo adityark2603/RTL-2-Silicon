@@ -99,3 +99,5 @@ $ make
 ![installation5](https://github.com/user-attachments/assets/e535b7c8-147b-4c96-b9bb-5dc9744ee649)
 
 #### 9. Launch GUI:
+
+![3](https://github.com/user-attachments/assets/9c102cb1-3a10-4574-bc9b-89fd0e31414f)
