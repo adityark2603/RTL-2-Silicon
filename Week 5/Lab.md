@@ -33,25 +33,13 @@ $ git clone https://github.com/gabime/spdlog.git
 #### 4. Patch OpenROAD Source and Root `CMakeLists.txt`
 **<ins>Part A</ins>:** Patch `src/CMakeLists.txt`:
 
-1.  Open the source-level CMake file:
-``` bash 
-$ nano src/CMakeLists.txt
-```
+1.  Open the source-level CMake file using nano
 2.  **Find and comment out** the existing `find_package` line for `spdlog`. This is done because we'll be building `spdlog` as a dependency target rather than relying on a system-wide package.
 
 
 **<ins>Part B</ins>:** Patch Root `CMakeLists.txt`
-
 1.  Open the top-level CMake file:
-     
-```bash
-$ nano CMakeLists.txt
-```
-2.  **Add the following line** immediately after the existing `add_subdirectory(third-party)` line and before `add_subdirectory(src)`:
-
- ```cmake
- add_subdirectory(third-party/spdlog) 
-```
+2.  **Add the line** `add_subdirectory(third-party/spdlog)` immediately after the existing `add_subdirectory(third-party)` line and before `add_subdirectory(src)`.
 This ensures the `spdlog` dependency is built and available before the main OpenROAD source is configured.
 
 #### 5. Build the Directory and run CMake:
