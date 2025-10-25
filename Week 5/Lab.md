@@ -74,3 +74,28 @@ $ sudo make install
 
 ![2](https://github.com/user-attachments/assets/67d828ef-c4d2-4bcd-a1ba-a04ccc3847c2)
 
+
+#### 7. Verify Installation:
+
+``` bash
+$ source ./env.sh
+$ yosys -help
+$ openroad -help
+```
+
+**Output:**
+
+![verify installation](https://github.com/user-attachments/assets/6a5624f5-68f7-4a00-8a9c-5bf422ce45da)
+
+#### 8. Run the OpenROAD Flow:
+
+``` bash
+$ cd flow
+$ make
+```
+
+**Output:**
+
+![installation5](https://github.com/user-attachments/assets/e535b7c8-147b-4c96-b9bb-5dc9744ee649)
+
+#### 9. Launch GUI:
