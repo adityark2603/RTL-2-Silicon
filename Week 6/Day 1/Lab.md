@@ -31,11 +31,15 @@ $ run_synthesis
 
 ![synth success](https://github.com/user-attachments/assets/322dec98-87ba-4b93-a33f-918fc742b75d)
 
-#### 3. Calculate Flop Ratio using Highlighted Values:
+#### 3. Calculate Flop Ratio using Values:
 
-![print stats picorv32](https://github.com/user-attachments/assets/5b73a25a-0cd3-4045-959f-17521b305d05)
+![print stats picorv32](https://github.com/user-attachments/assets/6de9cfa8-d5f0-4de7-b1c0-e834fedb244f)
+
 
 Calculation of Flop Ratio and DFF % from synthesis statistics report file:
+
+  - **Flop Cells (sky130_fd_sc_hd__dfxtp_2)**: 1613
+  - **Total Cells**: 14876
 
 $$Flop \ Ratio = \frac{1613}{14876} = 0.108429685$$
 
