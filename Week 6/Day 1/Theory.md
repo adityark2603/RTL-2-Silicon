@@ -1,7 +1,7 @@
 # RISC-V SoC Tapeout Program VSD
 ## ⛅ Inception of open-source EDA, OpenLANE, and Sky130 PDK
-### <ins>Package</ins>
-In any embedded board, what we see as the *chip* is actually its **package** — a protective layer encapsulating the real silicon **die**. The **actual chip (die)** is placed at the center of the package. Electrical connections between the **package** and the **chip** are made using the **Wire Bond** method.
+### <ins>Package:</ins>
+In any embedded board, what we see as the *chip* is actually its **package** — a protective layer encapsulating the real silicon **die**. The **actual chip (die)** is placed at the center of the package. Electrical connections between the **package** and the **chip** are made using the **Wire Bond** method. <br>
 
 <img width="1891" height="1628" alt="Screenshot 2025-10-26 123444" src="https://github.com/user-attachments/assets/17aff864-58dc-42bf-813c-ff797217fbd9" />
 
@@ -9,79 +9,51 @@ In any embedded board, what we see as the *chip* is actually its **package** —
 ### <ins>Chip Structure:</ins>
 1. **Pads**: Interface points for signals entering or leaving the chip.  
 2. **Core**: Contains all the digital logic.  
-3. **Die**: The combination of *core + pads* — the fundamental manufacturing unit.
+3. **Die**: The combination of *core + pads* — the fundamental manufacturing unit. <br>
 
 <img width="1657" height="1030" alt="image" src="https://github.com/user-attachments/assets/79a213e0-1c86-409c-9b7e-2f3c5098969e" />
 
-#### Foundry & IPs
-- **Foundry**: The manufacturing facility where semiconductor chips are fabricated.  
-- **Foundry IPs**: Proprietary design components optimized for a specific process node.  
-- **Macros**: Reusable digital logic blocks.
+#### <ins>Foundry & IPs:</ins>
+   - **Foundry**: The manufacturing facility where semiconductor chips are fabricated.  
+   - **Foundry IPs**: Proprietary design components optimized for a specific process node.  
+   - **Macros**: Reusable digital logic blocks.
 
-📸 *[Insert relevant image]*
+<img width="1937" height="1050" alt="image" src="https://github.com/user-attachments/assets/647c4de3-26f1-47de-92b2-f32e6371acfa" />
 
----
 
-### 🧮 3. ISA (Instruction Set Architecture)
-
+### <ins> Introduction to RISC-V Instruction Set Architecture:</ins>
 A **C program** running on hardware follows a sequence of transformations:
 
-1. **C Program → Assembly (ISA)**  
-   Example: `RISC-V ISA` – *Reduced Instruction Set Computing Architecture*  
-2. **Assembly → Machine Language**  
-   Converts to binary (0s and 1s) understood by hardware.  
-3. **RTL Implementation**  
-   Hardware logic implementing the ISA using Verilog/VHDL.  
-4. **PnR / RTL-to-GDSII Flow**  
-   Converts RTL to layout for chip fabrication.
+   1. **C Program → Assembly (ISA)**  
+      Example: `RISC-V ISA` – *Reduced Instruction Set Computing Architecture*  
+   2. **Assembly → Machine Language**  
+      Converts to binary (0s and 1s) understood by hardware.  
+   3. **RTL Implementation**  
+      Hardware logic implementing the ISA using Verilog/VHDL.  
+   4. **PnR / RTL-to-GDSII Flow**  
+      Converts RTL to layout for chip fabrication.<br>
 
-📸 *[Insert relevant image]*
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/d23059f6-8cfa-4396-abcb-b59913073c70" />
 
----
 
-### 🧰 4. Software to Hardware Flow
-
+### <ins>Software to Hardware Flow:</ins>
 #### System Software Layers:
-1. **Operating System (OS)** – Provides basic functions in C, C++, VB, Java.  
-2. **Compiler** – Converts high-level code into hardware-specific instructions.  
-3. **Assembler** – Converts instructions into binary (machine code).
+   1. **Operating System (OS)** – Provides basic functions in C, C++, VB, Java.  
+   2. **Compiler** – Converts high-level code into hardware-specific instructions.  
+   3. **Assembler** – Converts instructions into binary (machine code).
 
-These binaries are then executed by the **hardware**.
+These binaries are then executed by the **hardware**. <br>
 
-📸 *[Insert relevant image]*
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/b8c9db80-2362-4b87-9f76-ebf5bb19aaed" />
 
-**Example:**  
-Stopwatch app on RISC-V core  
-→ OS outputs C function  
-→ Compiler → RISC-V Instructions  
-→ Assembler → Binary  
-→ Fed into chip layout
+### <ins>RTL and Physical Design:</ins>
+   1. **Compiler Output** → Instructions  
+   2. **Assembler Output** → Binary  
+   3. **RTL (Hardware Description Language)** implements instructions  
+   4. **Synthesis** → Converts RTL to gate-level netlist  
+   5. **Physical Design Implementation** → Layout and fabrication
 
-📸 *[Insert relevant images]*
-
----
-
-### 💻 5. RTL and Physical Design
-
-1. **Compiler Output** → Instructions  
-2. **Assembler Output** → Binary  
-3. **RTL (Hardware Description Language)** implements instructions  
-4. **Synthesis** → Converts RTL to gate-level netlist  
-5. **Physical Design Implementation** → Layout and fabrication
-
-📸 *[Insert relevant image]*
-
----
-
-### 🧠 6. Course Components
-
-1. **RISC-V ISA**  
-2. **RTL & Synthesis of RISC-V CPU Core (picorv32)**  
-3. **Physical Design Implementation of picorv32**
-
-📸 *[Insert relevant image]*
-
----
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/b8699379-35e1-4688-b28d-f7382d136a38" /> <br>
 
 ### 🌍 7. Open-Source Implementation
 
