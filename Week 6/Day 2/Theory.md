@@ -44,9 +44,8 @@ $$\[
   - If **Aspect Ratio ≠ 1**, the core is **rectangular**.
 
 
-For example:
-
-**Case 1:**  
+**For example:** <br>
+<ins>**Case 1**</ins>:
 Core area = 4 sq. units (2 × 2)
 
 $$\[
@@ -58,10 +57,10 @@ $$\[
 
 The core is **square-shaped**.
 
-<img width="348" height="327" alt="image" src="https://github.com/user-attachments/assets/a8840384-85fe-4488-a7fe-ac958efe10e6" />
+<img width="348" height="327" alt="image" src="https://github.com/user-attachments/assets/a8840384-85fe-4488-a7fe-ac958efe10e6" /> 
 
 
-**Case 2:**  
+<ins>**Case 2**</ins>:
 Core area = 8 sq. units (2 × 4)
 
 $$\[
