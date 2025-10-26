@@ -72,14 +72,14 @@ $$\[
 
 ∴ The core is **rectangular-shaped**.
 
-<img width="348" height="327" alt="image" src="https://github.com/user-attachments/assets/0cadd262-2e8c-4997-8e33-0bb5b119ce0d" />
+<img width="348" height="327" alt="image" src="https://github.com/user-attachments/assets/0cadd262-2e8c-4997-8e33-0bb5b119ce0d" /> <br>
 
 #### <ins>Preplaced cells:</ins>
 Preplaced cells are fixed standard cells or macros whose locations are defined before the automated placement stage in VLSI physical design. These cells are “pre-placed” at specific coordinates and are not moved during the regular placement optimization process.
 
 <img width="2924" height="1964" alt="Screenshot 2025-10-26 213400" src="https://github.com/user-attachments/assets/c10561bf-4b31-4cfe-bddd-d4f08cac003f" /> <br>
 
-<img width="1948" height="1028" alt="Screenshot 2025-10-26 213558" src="https://github.com/user-attachments/assets/76a2596c-5787-439d-a39a-6d71980959ec" />
+<img width="1948" height="1028" alt="Screenshot 2025-10-26 213558" src="https://github.com/user-attachments/assets/76a2596c-5787-439d-a39a-6d71980959ec" /> <br>
 
 
 #### <ins>Decoupling Capacitors:</ins> 
@@ -93,16 +93,26 @@ Power planning is the process of designing the power and ground distribution net
 #### <ins>Problem with having a single power supply:</ins>
 A single power supply can cause uneven voltage distribution, leading to IR drops, noise coupling, and poor performance, especially in large chips with high current demands.
 
-<img width="2697" height="1833" alt="Screenshot 2025-10-26 215358" src="https://github.com/user-attachments/assets/bc390448-66a8-4a43-8184-cc7c2178f6d3" />
+<img width="2697" height="1833" alt="Screenshot 2025-10-26 215358" src="https://github.com/user-attachments/assets/bc390448-66a8-4a43-8184-cc7c2178f6d3" /> <br>
 
 **Problem 1:** Ground bounce occurs when a sudden switching current through the package inductance causes a temporary rise in ground potential, leading to noise and logic errors. It’s common in high-speed circuits with many simultaneous switching outputs.
 
-<img width="2890" height="1726" alt="Screenshot 2025-10-26 215126" src="https://github.com/user-attachments/assets/28faaef8-2d55-496c-9f8c-e6119a444028" />
+<img width="2890" height="1726" alt="Screenshot 2025-10-26 215126" src="https://github.com/user-attachments/assets/28faaef8-2d55-496c-9f8c-e6119a444028" /> <br>
 
 
 **Problem 2:** Voltage droop is the temporary reduction in supply voltage due to high current demand and resistance in power lines. It can slow down or even malfunction logic circuits if the voltage drops below threshold levels.
 
-<img width="2932" height="1802" alt="Screenshot 2025-10-26 215143" src="https://github.com/user-attachments/assets/f8c4d75d-c29b-4258-87aa-39d928700356" />
+<img width="2932" height="1802" alt="Screenshot 2025-10-26 215143" src="https://github.com/user-attachments/assets/f8c4d75d-c29b-4258-87aa-39d928700356" /> <br>
+
+
+
+
+
+
+
+
+
+
 
 
 
