@@ -55,153 +55,41 @@ These binaries are then executed by the **hardware**. <br>
 
 <img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/b8699379-35e1-4688-b28d-f7382d136a38" /> <br>
 
-### 🌍 7. Open-Source Implementation
+### <ins> Open-Source Implementation: </ins>
+For **open-source ASIC design implementation**, three key enablers must be readily available as open-source versions: **RTL designs, EDA tools, and PDK data**.
+The interface between designers and the fabrication facility has evolved into a collection of data files and documents known as **Process Design Kits (PDKs)**.
+These kits include—but are not limited to—**device models, technology information, design rules, digital standard cell libraries, I/O libraries**, and more.
 
-#### Open-Source Enablers
-1. **RTL Designs**  
-2. **EDA Tools**  
-3. **PDK Data**
+### <ins>OpenLANE ASIC Design Flow:</ins>
+ASIC (Application-Specific Integrated Circuit) design involves multiple stages and tools tied together in a **standardized flow**. The goal is to take a design from **RTL → GDSII** (final layout for fabrication), with no human intervention.
 
-##### Historical Background
-- In 1979, **Lynn Conway** and **Carver Mead** introduced structured VLSI design with λ-based design rules.  
-- This led to **fabless companies** (design only) and **pure-play fabs** (fabrication only).  
-- The interface between the two is defined by **Process Design Kits (PDKs)** containing:  
-  - Device Models  
-  - Technology Info  
-  - Design Rules  
-  - Standard Cell Libraries  
-  - I/O Libraries  
+<img width="1100" height="779" alt="image" src="https://github.com/user-attachments/assets/15b97734-ac05-4e8f-a0f8-1e1ccf1372bd" />
 
-PDKs were once closed-source (under NDAs), but in **2020**, **Google and Skywater** released the **first open-source PDK (130nm process)**.
+### <ins>RTL to GDSII Complete Flow:</ins>
+<img width="1771" height="955" alt="image" src="https://github.com/user-attachments/assets/13bf9e74-061a-4c36-b594-a5cc4d9b2eca" />
 
-📸 *[Insert relevant image]*
+#### 1. <ins>Synthesis:</ins>
+   - Converts **RTL** → **Gate-Level Netlist** using **Standard Cell Libraries (SCL)**.  
+   - Output is functionally equivalent to RTL.
 
----
+#### 2. <ins>Floor Planning & Power Planning:</ins>
+   - **Chip Floor-Planning** - Partitions the chip die between different system building blocks and places I/O ads
+   - **Macro Floor-Planning** - Assigns dimensions, pin locations, and row definitions.
+   - **Power Planning** - Performed to minimize issues such as electromigration and IR drops.
 
-### 🏗️ 8. ASIC Design Flow
+#### 3. <ins>Placement:</ins>
+   - Involves arranging the standard cells on the chip floorplan to optimize area, performance, and power.
+   - It ensures minimal wirelength and efficient signal timing while adhering to design constraints and block boundaries.
 
-ASIC (Application-Specific Integrated Circuit) design involves multiple stages and tools tied together in a **standardized flow**.
+#### 4. <ins>Clock-Tree Synthesis (CTS):</ins>
+   - CTS builds a balanced clock distribution network that delivers the clock signal to all sequential elements with minimal skew and latency.
+   - It ensures synchronization across the chip while maintaining timing and power efficiency.
 
-📸 *[Insert flow diagram]*
+#### 5. <ins>Routing:</ins>
+   - Routing connects all the placed cells, pins, and macros using metal layers while adhering to design rules.
+   - It focuses on minimizing congestion, delay, and crosstalk to ensure reliable signal propagation.
 
----
+#### 6. <ins>Sign-Off:</ins>
+   - Sign-off is the final verification stage before tape-out, ensuring the design is ready for fabrication. 
+   - It includes **Design Rule Check (DRC)** to validate layout rules, **Layout vs. Schematic (LVS)** to confirm connectivity, and **Static Timing Analysis (STA)(( to verify that timing constraints are met.
 
-### 🧩 9. OpenLANE ASIC Design Flow
-
-**Goal:** Take a design from **RTL → GDSII** (final layout for fabrication).
-
-📸 *[Insert image]*
-
-#### 🔧 Synthesis
-- Converts **RTL** → **Gate-Level Netlist** using **Standard Cell Libraries (SCL)**.  
-- Output is functionally equivalent to RTL.
-
-📸 *[Insert image]*
-
-#### 🧱 Standard Cell Views
-Each standard cell has multiple representations used by various EDA tools:
-
-| View Type | Description |
-|------------|-------------|
-| Liberty (.lib) | Electrical and timing models |
-| HDL Models | Behavioral simulation |
-| SPICE/CDL | Transistor-level simulation |
-| GDSII | Detailed physical layout |
-| LEF | Abstract layout view |
-
-📸 *[Insert image]*
-
----
-
-### 🗺️ 10. Floor Planning
-
-#### 🧭 Chip Floor Planning
-Defines the overall layout, including placement of macros and I/O pads.
-
-📸 *[Insert image]*
-
-#### 📐 Macro Floor Planning
-Places large blocks (like SRAMs, ALUs) inside the core.
-
-📸 *[Insert image]*
-
----
-
-### ⚡ 11. Power Planning (PP)
-
-- Uses upper metal layers for **power distribution** (thicker = lower resistance).  
-- Aims to prevent **electromigration** and **IR drops**.
-
-📸 *[Insert image]*
-
----
-
-### 📍 12. Placement
-
-#### Global Placement
-- Rough placement of cells based on connectivity.  
-- Overlaps may occur.
-
-#### Detailed Placement
-- Refines placement to ensure legality (non-overlapping).
-
-📸 *[Insert image]*
-
----
-
-### ⏰ 13. Clock Tree Synthesis (CTS)
-
-- Ensures clock reaches all sequential elements.  
-- **Clock Skew**: Time difference in clock arrival at different components.
-
-📸 *[Insert image]*
-
----
-
-### 🔗 14. Routing
-
-- **Skywater PDK** has **6 routing layers**:  
-  - Bottom: Titanium Nitride (Local Interconnect)  
-  - Top 5: Aluminum layers
-
-📸 *[Insert stackup image]*
-
-#### Global & Detailed Routing
-Performs signal interconnections at metal layers.
-
-📸 *[Insert image]*
-
----
-
-### ✅ 15. Sign-Off Checks
-
-Before fabrication, the final layout undergoes several verification steps:
-
-| Check | Purpose |
-|--------|----------|
-| **DRC (Design Rule Check)** | Ensures layout obeys fabrication rules |
-| **LVS (Layout vs Schematic)** | Verifies layout matches gate-level netlist |
-| **STA (Static Timing Analysis)** | Ensures design meets timing constraints |
-
-📸 *[Insert image]*
-
----
-
-### 🧩 Summary
-
-| Stage | Description |
-|--------|-------------|
-| **Package** | Protective covering over the silicon die |
-| **Die** | Core + Pads |
-| **ISA** | Instruction set architecture (e.g., RISC-V) |
-| **RTL Design** | Hardware description implementation |
-| **Synthesis** | RTL → Gate-level netlist |
-| **PnR Flow** | Physical design and layout generation |
-| **OpenLANE** | Open-source ASIC implementation toolchain |
-| **Skywater PDK** | Open-source 130nm fabrication process |
-
----
-
-### 🏁 End of Document
-*Author: [Your Name]*  
-*Project: Open-Source ASIC Design using RISC-V and OpenLANE*
