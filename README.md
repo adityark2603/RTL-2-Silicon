@@ -59,6 +59,12 @@ Welcome to my journey through the RISC-V SoC Tapeout program VSD!!! 🥰🥰
   4. Evaluated noise margins to assess CMOS inverter robustness and reliability.
   5. Studied the impact of power supply and device variations on overall circuit stability and performance.
 
+## 🗺️ [Week 5](https://github.com/adityark2603/RTL-2-Silicon/tree/main/Week%205) - OpenROAD Flow Setup and Floorplan + Placement
+### <ins>Key Learnings from Week 5: </ins>
+1. Floorplanning defines the chip’s physical structure — setting die/core areas, placing macros and I/O pads, and organizing standard cell rows while ensuring good power delivery through PDN design.
+2. Placement arranges standard cells within the floorplan to minimize wire length, reduce congestion, and meet timing constraints, using both global (approximate) and detailed (final) placement stages.
+3. Successful physical design balances logical connectivity, power integrity, and physical layout efficiency to ensure optimal chip performance and manufacturability.
+
 
 
 
@@ -74,4 +80,4 @@ I am grateful to [**Kunal Ghosh**](https://github.com/kunalg123) and Team **[VLS
 ![Week 2](https://img.shields.io/badge/Week%202-BabySoC_Fundamentals_&_Functional_Modelling-success?style=flat-square)
 ![Week 3](https://img.shields.io/badge/Week%203-Post_Synthesis_GLS_&_STA_Fundamentals-success?style=flat-square)
 ![Week 4](https://img.shields.io/badge/Week%204-CMOS_Circuit_Design-success?style=flat-square)
-
+![Week 5](https://img.shields.io/badge/Week%205-OpenROAD_Flow_Setup_and_Floorplan_+_Placement-success?style=flat-square)
