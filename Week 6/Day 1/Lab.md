@@ -35,7 +35,7 @@ $ run_synthesis
 
 ![print stats picorv32](https://github.com/user-attachments/assets/5b73a25a-0cd3-4045-959f-17521b305d05)
 
-Calculation of Flop Ratio and DFF % from synthesis statistics report file
+Calculation of Flop Ratio and DFF % from synthesis statistics report file:
 
 $$Flop \ Ratio = \frac{1613}{14876} = 0.108429685$$
 
