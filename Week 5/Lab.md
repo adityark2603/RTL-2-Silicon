@@ -1,69 +1,35 @@
 # RISC-V SoC Tapeout Program VSD 
 ## 🗺️ OpenROAD Flow Setup and Floorplan + Placement
+OpenROAD is an open-source, fully automated RTL-to-GDSII flow for digital integrated circuit (IC) design. It supports synthesis, floorplanning, placement, clock tree synthesis, routing, and final layout generation. OpenROAD enables rapid design iterations, making it ideal for academic research and industry prototyping.
+
+⚠️ <ins>**NOTE:**</ins> These commands were all run on **Ubuntu 22.04** version. Running these on higher versions of Ubuntu may bring up errors. Hence, it is recommended to run these on Ubuntu versions **20.04** or **22.04** <br>
+
 ### <ins>Steps to Install & Setup OpenROAD: </ins>
-#### 1. Install necessary build tools and gcc-9:
+#### 1. Clone the OpenROAD Repository:
 
 ``` bash
-$ sudo apt update
-$ sudo apt install build-essential git cmake swig python3-dev
-$ sudo add-apt-repository ppa::ubuntu-toolchain-r/test -y
-$ sudo apt update
-$ sudo apt install g++-9 -y
-```
-#### 2. Build & Install `or-tools`:
-
-``` bash
-$ git clone https://github.com/google/or-tools.git
-$ cd or-tools
-$ mkdir build && cd build
-$ make -j$(nproc)
-$ sudo make install
+$ git clone --recursive https://github.com/The-OpenROAD-Project/OpenROAD-flow-scripts
+$ cd OpenROAD-flow-scripts
 ```
 
-#### 3. Clone OpenROAD & fix Submodule Corruption:
+#### 2. Run the Setup script:
 
 ``` bash
-$ git clone https://github.com/The-OpenROAD-Project/OpenROAD.git
-$ cd OpenROAD
-$ cd third-party
-$ git clone https://github.com/gabime/spdlog.git
+$ sudo ./setup.sh
 ```
 
-
-#### 4. Patch OpenROAD Source and Root `CMakeLists.txt`
-**<ins>Part A</ins>:** Patch `src/CMakeLists.txt`:
-
-1.  Open the source-level CMake file using nano
-2.  **Find and comment out** the existing `find_package` line for `spdlog`. This is done because we'll be building `spdlog` as a dependency target rather than relying on a system-wide package.
-
-
-**<ins>Part B</ins>:** Patch Root `CMakeLists.txt`
-1.  Open the top-level CMake file:
-2.  **Add the line** `add_subdirectory(third-party/spdlog)` immediately after the existing `add_subdirectory(third-party)` line and before `add_subdirectory(src)`.
-This ensures the `spdlog` dependency is built and available before the main OpenROAD source is configured.
-
-#### 5. Build the Directory and run CMake:
+#### 3. Build OpenROAD:
 
 ``` bash
-$ rm -rf build
-$ mkdir build
-$ cd build
-$ cmake .. -DCMAKE_BUILD_TYPE=Release -DCMAKE_CXX_FLAGS="-Wno-error" -DCMAKE_PREFIX_PATH="/usr/local" -DCMAKE_CXX_COMPILER=/usr/bin/g++-9
-```
-
-#### 6. Compile and Install OpenROAD:
-
-``` bash
-$ make -j$(nproc)
-$ sudo make install
+$ ./build_openroad.sh --local
 ```
 
 **Output:**
 
-![2](https://github.com/user-attachments/assets/67d828ef-c4d2-4bcd-a1ba-a04ccc3847c2)
+![build ](https://github.com/user-attachments/assets/c2c26326-0e51-4a64-9582-33a396747ad9)
 
 
-#### 7. Verify Installation:
+#### 4. Verify Installation:
 
 ``` bash
 $ source ./env.sh
@@ -73,9 +39,10 @@ $ openroad -help
 
 **Output:**
 
-![verify installation](https://github.com/user-attachments/assets/6a5624f5-68f7-4a00-8a9c-5bf422ce45da)
+![verify install](https://github.com/user-attachments/assets/4ff0af11-4ad8-4e7f-9aa8-15384a589fdc)
 
-#### 8. Run the OpenROAD Flow:
+
+#### 5. Run the OpenROAD flow:
 
 ``` bash
 $ cd flow
@@ -84,8 +51,18 @@ $ make
 
 **Output:**
 
-![installation5](https://github.com/user-attachments/assets/e535b7c8-147b-4c96-b9bb-5dc9744ee649)
+![make ](https://github.com/user-attachments/assets/06d33fff-2070-4f28-b39e-f3461e72c752)
 
-#### 9. Launch GUI:
 
-![3](https://github.com/user-attachments/assets/9c102cb1-3a10-4574-bc9b-89fd0e31414f)
+#### 6. Launch the GUI and visualize the final layout:
+
+``` bash
+$ make gui_final
+```
+
+**Output:**
+
+![make gui final](https://github.com/user-attachments/assets/7a579f37-dc7e-4d4a-80ba-f4d16f503b7d)
+
+
+
