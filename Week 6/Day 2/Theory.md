@@ -55,7 +55,7 @@ $$\[
 \text{Aspect Ratio} = \frac{2}{2} = 1
 \]$$
 
-The core is **square-shaped**.
+∴ The core is **square-shaped**.
 
 <img width="348" height="327" alt="image" src="https://github.com/user-attachments/assets/a8840384-85fe-4488-a7fe-ac958efe10e6" /> 
 
@@ -70,7 +70,7 @@ $$\[
 \text{Aspect Ratio} = \frac{2}{4} = 0.5
 \]$$
 
-The core is **rectangular-shaped**.
+∴ The core is **rectangular-shaped**.
 
 <img width="348" height="327" alt="image" src="https://github.com/user-attachments/assets/0cadd262-2e8c-4997-8e33-0bb5b119ce0d" />
 
