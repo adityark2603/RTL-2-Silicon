@@ -104,12 +104,10 @@ A single power supply can cause uneven voltage distribution, leading to IR drops
 
 <img width="2932" height="1802" alt="Screenshot 2025-10-26 215143" src="https://github.com/user-attachments/assets/f8c4d75d-c29b-4258-87aa-39d928700356" /> <br>
 
+**Advantage of Distributed Power Supply:**
+A distributed power supply network provides uniform voltage, reduces IR drop and noise, and improves reliability by delivering power locally to each region of the chip through multiple well-planned routes.
 
-
-
-
-
-
+<img width="2777" height="2027" alt="Screenshot 2025-10-26 215418" src="https://github.com/user-attachments/assets/0ea30595-fc4d-4bcc-8251-0b751b29dc6c" />
 
 
 
