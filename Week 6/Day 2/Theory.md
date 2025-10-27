@@ -107,7 +107,19 @@ A single power supply can cause uneven voltage distribution, leading to IR drops
 **Advantage of Distributed Power Supply:**
 A distributed power supply network provides uniform voltage, reduces IR drop and noise, and improves reliability by delivering power locally to each region of the chip through multiple well-planned routes.
 
-<img width="2777" height="2027" alt="Screenshot 2025-10-26 215418" src="https://github.com/user-attachments/assets/0ea30595-fc4d-4bcc-8251-0b751b29dc6c" />
+<img width="2777" height="2027" alt="Screenshot 2025-10-26 215418" src="https://github.com/user-attachments/assets/0ea30595-fc4d-4bcc-8251-0b751b29dc6c" /> <br>
+
+#### <ins>Pin Placement:</ins>
+Pin placement refers to the process of assigning and fixing the input/output (I/O) pins of a design on the periphery of the chip or block. Proper pin placement ensures efficient routing, minimizes signal delay, and reduces congestion. It plays a crucial role in achieving timing closure and optimizing power and performance.
+
+<img width="2215" height="2117" alt="Screenshot 2025-10-27 211004" src="https://github.com/user-attachments/assets/d713efbc-dd5f-4b11-b110-723890906550" /> <br>
+
+
+#### <ins>Logical Cell Placement Blockage: </ins>
+A logical cell placement blockage is a restricted region defined in the floorplan where no standard cells (logic cells) can be placed.
+
+<img width="2668" height="1944" alt="Screenshot 2025-10-27 211037" src="https://github.com/user-attachments/assets/8d3d3b03-eed1-4821-835f-ddbb3e50c10f" /> <br>
+
 
 
 
