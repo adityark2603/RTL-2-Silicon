@@ -136,3 +136,55 @@ Involves refining the initial cell positions by estimating interconnect wire len
 
 #### <ins>Library Characterization & Modelling:</ins>
 Library characterization and modelling is the process of simulating and analyzing standard cells to extract and model critical electrical parameters such as timing, power, and noise under various operating conditions.
+
+### 🗺️ <ins>Cell Design and Characterization Flows:</ins>
+#### <ins>Cell Design Flow:</ins>
+
+<img width="712" height="744" alt="image" src="https://github.com/user-attachments/assets/a9ef6f1d-3e82-4881-97c4-cd0242e8c657" /><br>
+
+**Standard cells**: Pre-designed, pre-verified logic circuit blocks (like AND, OR, flip-flops, etc.) used in ASIC design. They form the basic building units of the chip’s logic and are placed and interconnected during the physical design phase to implement the synthesized netlist efficiently. <br>
+<img width="1630" height="877" alt="image" src="https://github.com/user-attachments/assets/77fb2ab2-5b83-4b61-a2e7-98762974918b" />
+
+
+**Circuit Design Step**: In this stage, transistor-level schematics are created and simulated to meet performance, power, and functionality targets using SPICE or similar tools. <br>
+<img width="1700" height="982" alt="image" src="https://github.com/user-attachments/assets/e2e4bcf1-4850-4f6c-98ae-69d781f076a9" /><br>
+
+**Layout Design Step**: The physical representation of the circuit is drawn, defining the exact placement of transistors and interconnections while ensuring design rule compliance and minimal parasitics. <br>
+
+<img width="1595" height="915" alt="image" src="https://github.com/user-attachments/assets/bd0583f3-d87c-4a8e-afbf-2eab6b7d53b2" />
+
+### ⌛ <ins>General Timing Characterization Parameters:</ins>
+#### <ins>Timing Threshold Definitions:</ins>
+##### **1. slew_low_rise_thr**
+The **lower voltage threshold** (e.g., 10% of Vdd) used to mark the **start** of a signal’s rising transition.
+
+##### **2. slew_high_rise_thr**
+The **upper voltage threshold** (e.g., 90% of Vdd) used to mark the **end** of a signal’s rising transition.
+→ The time between `slew_low_rise_thr` and `slew_high_rise_thr` defines the **rise transition time (rise slew).**
+
+##### **3. slew_low_fall_thr**
+The **upper voltage threshold** (e.g., 90% of Vdd) marking the **start** of a falling transition.
+
+##### **4. slew_high_fall_thr**
+The **lower voltage threshold** (e.g., 10% of Vdd) marking the **end** of a falling transition.
+→ The time between `slew_low_fall_thr` and `slew_high_fall_thr` defines the **fall transition time (fall slew).**
+
+
+##### **5. in_rise_thr** 
+The voltage level (typically 50% of Vdd) at which the **input rising signal** is measured for **propagation delay.**
+
+##### **6. in_fall_thr**
+The voltage level (typically 50% of Vdd) at which the **input falling signal** is measured for **propagation delay.**
+
+##### **7. out_rise_thr**
+The voltage level (typically 50% of Vdd) at which the **output rising signal** is measured to determine when the output transition occurs.
+
+##### **8. out_fall_thr**
+The voltage level (typically 50% of Vdd) at which the **output falling signal** is measured.
+
+<img width="1597" height="845" alt="image" src="https://github.com/user-attachments/assets/f9afbd8b-72a3-4eb0-bcaf-4c1157b0040e" /><br>
+
+
+**Propagation Delay (tpd)**: The time taken for a signal to travel from the input to the output of a gate, measured between the 50% Vdd points of the input and output waveforms.
+
+**Transition Time (Slew Rate):** The time it takes for a signal to transition between low and high voltage levels, commonly measured between 10% Vdd and 90% Vdd points of the waveform.
