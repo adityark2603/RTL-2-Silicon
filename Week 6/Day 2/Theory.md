@@ -1,7 +1,8 @@
 # RISC-V SoC Tapeout Program VSD
 ## 🗞️ Good floorplan vs Bad floorplan and Introduction to library cells
 
-###  <ins>Core and Die Concept:</ins> 
+### 🍁 <ins>Chip Floor Planning Considerations:</ins>
+####  <ins>Core and Die Concept:</ins> 
 The **core** is the area in a chip used to place all the **logic cells and components**. It is the region where the actual **logic implementation** of the chip resides.
 The **die** is the area that **encircles the core area** and is used for placing **I/O-related components**.
 
@@ -121,8 +122,17 @@ A logical cell placement blockage is a restricted region defined in the floorpla
 <img width="2668" height="1944" alt="Screenshot 2025-10-27 211037" src="https://github.com/user-attachments/assets/8d3d3b03-eed1-4821-835f-ddbb3e50c10f" /> <br>
 
 
+### 📌 <ins>Library Binding & Placement:</ins>
+#### <ins>Netlist Binding & Initial Place Design:</ins>
+Netlist binding and initial place design involve mapping the logical netlist to its corresponding physical library cells (binding), ensuring that each gate or component is associated with a real, manufacturable cell. Once bound, the placement stage arranges these cells within the chip’s floorplan to optimize area, timing, and interconnect length before detailed routing.
+
+<img width="1785" height="782" alt="image" src="https://github.com/user-attachments/assets/f8adae5c-631c-41ee-86f6-be09beefc55f" />
+
+#### <ins>Optimize Placement using Estimated Wire-Length & Capacitance: </ins>
+Involves refining the initial cell positions by estimating interconnect wire lengths and capacitive loads. These estimates guide the placement tool to minimize delay, power consumption, and congestion, ensuring better overall timing and signal integrity before routing.
+
+<img width="1785" height="845" alt="image" src="https://github.com/user-attachments/assets/671aa5dc-c31f-4601-95a5-b0b72ac140e4" />
 
 
-
-
-
+#### <ins>Library Characterization & Modelling:</ins>
+Library characterization and modelling is the process of simulating and analyzing standard cells to extract and model critical electrical parameters such as timing, power, and noise under various operating conditions.
