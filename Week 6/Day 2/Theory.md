@@ -140,14 +140,14 @@ Library characterization and modelling is the process of simulating and analyzin
 ### 🗺️ <ins>Cell Design and Characterization Flows:</ins>
 #### <ins>Cell Design Flow:</ins>
 
-<img width="712" height="744" alt="image" src="https://github.com/user-attachments/assets/a9ef6f1d-3e82-4881-97c4-cd0242e8c657" /><br>
+<img width="712" height="744" alt="image" src="https://github.com/user-attachments/assets/a9ef6f1d-3e82-4881-97c4-cd0242e8c657" /> <br>
 
 **Standard cells**: Pre-designed, pre-verified logic circuit blocks (like AND, OR, flip-flops, etc.) used in ASIC design. They form the basic building units of the chip’s logic and are placed and interconnected during the physical design phase to implement the synthesized netlist efficiently. <br>
-<img width="1630" height="877" alt="image" src="https://github.com/user-attachments/assets/77fb2ab2-5b83-4b61-a2e7-98762974918b" />
+<img width="1630" height="877" alt="image" src="https://github.com/user-attachments/assets/77fb2ab2-5b83-4b61-a2e7-98762974918b" /> <br>
 
 
 **Circuit Design Step**: In this stage, transistor-level schematics are created and simulated to meet performance, power, and functionality targets using SPICE or similar tools. <br>
-<img width="1700" height="982" alt="image" src="https://github.com/user-attachments/assets/e2e4bcf1-4850-4f6c-98ae-69d781f076a9" /><br>
+<img width="1700" height="982" alt="image" src="https://github.com/user-attachments/assets/e2e4bcf1-4850-4f6c-98ae-69d781f076a9" /> <br>
 
 **Layout Design Step**: The physical representation of the circuit is drawn, defining the exact placement of transistors and interconnections while ensuring design rule compliance and minimal parasitics. <br>
 
