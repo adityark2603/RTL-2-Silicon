@@ -1,5 +1,5 @@
-![11](https://github.com/user-attachments/assets/82336374-d556-4e14-b968-4ed154577bfe)RISC-V SoC Tapeout Program VSD
-🗞️ Good floorplan vs Bad floorplan and Introduction to library cells
+# RISC-V SoC Tapeout Program VSD
+## 🗞️ Good floorplan vs Bad floorplan and Introduction to library cells
 
 #### 1. Run 'picorv32a' design floorplan using OpenLANE flow & generate necessary outputs:
 ``` bash
