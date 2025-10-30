@@ -39,8 +39,8 @@ A SPICE deck is a text file used for circuit simulation that lists all circuit e
    - Lightly Doped Drain (LDD) formation begins by implanting a lightly doped impurity region adjacent to the transistor gate using the gate as a mask, reducing the electric field near the drain edge and mitigating hot carrier effects.
    - After forming this region, sidewall spacers are created by depositing and etching a conformal layer around the gate edges; these spacers serve as a mask for subsequent heavy doping of the source and drain regions, completing the LDD structure.
 
-📕 **<ins>NOTE:</ins>**:
-1. **Plasma Anisotropic Etching** - Is a dry etching technique used in semiconductor manufacturing where ions generated in a plasma are directionally accelerated toward the substrate to etch material primarily in a vertical direction. This produces highly controlled, vertical sidewalls with minimal lateral etching, essential for fabricating precise micro- and nanoscale features. <br>
+📕 **<ins>NOTE:</ins>**
+1. **Plasma Anisotropic Etching** - It's a dry etching technique used in semiconductor manufacturing where ions generated in a plasma are directionally accelerated toward the substrate to etch material primarily in a vertical direction. This produces highly controlled, vertical sidewalls with minimal lateral etching, essential for fabricating precise micro- and nanoscale features. <br>
 
 2. **Hot Electron Effect** - Occurs in MOSFETs when electrons gain high kinetic energy near the drain due to strong electric fields, causing impact ionization and injection of electrons into the gate oxide. This leads to gate oxide damage, threshold voltage shift, and reduced transistor lifetime. <br>
 
