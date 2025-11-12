@@ -1,5 +1,5 @@
 # RISC-V SoC Tapeout Program VSD
-## 🎨 Design Library cell using Magic Layout & NGSpice Characterization:
+## 🎨 Design Library cell using Magic Layout & NGSpice Characterization
 ### <ins>SPICE Deck creation for CMOS Inverter:</ins>
 A SPICE deck is a text file used for circuit simulation that lists all circuit elements (like resistors, transistors, capacitors) with their connections, values, and the nodes that link them together. <br>
 
