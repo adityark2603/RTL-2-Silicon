@@ -35,3 +35,9 @@ Width of Standard cell = 0.34 um</b>
 <b> Vertical track pitch = 0.46 um <br>
 Height of Standard cell = 0.34 um * 8 = 2.72 um </b>
 </p>
+
+#### 2. Save the finalized layout with a custom name and open it 
+``` bash
+$ save sky130_vsdinv.mag
+$ magic -T sky130A.tech sky130_vsdinv.mag
+```
