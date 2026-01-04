@@ -150,4 +150,54 @@ $ plot y vs time a
 </p>
 
 
+### <ins>Magic Cases:</ins>
+``` bash
+$ cd
+$  wget http://opencircuitdesign.com/open_pdks/archive/drc_tests.tgz
+$ tar xfz drc_tests.tgz
+$ cd drc_tests
+$ ls -al
+$ gvim .magicrc
+$ magic -d XR &
+```
+
+**Output:**
+![2](https://github.com/user-attachments/assets/339caf9d-5c0f-44c9-ac86-8aa0b527e39f)
+
+**Magic file:** 
+
+![1](https://github.com/user-attachments/assets/c2c84dbe-5f47-4247-958e-9f619274854f)
+
+#### <ins>NOTE:</ins>
+Go through all the rules in this website prior to implementing the changes: <br>
+https://skywater-pdk.readthedocs.io/en/main/rules.html
+
+### <ins>Incorrectly Implemented `poly.9`:</ins>
+#### 1. Load `poly.mag` file:
+![3](https://github.com/user-attachments/assets/f9193f6a-9da0-418e-80f1-9a926ab87fee)
+
+#### 2. Add the following lines in the `sky130A.tech` file to avoid DRC errors:
+![4](https://github.com/user-attachments/assets/11ca8a8e-561e-4403-a5c8-8d8a54c6004d) <br>
+
+![5](https://github.com/user-attachments/assets/44fb7f31-316b-401d-ab87-0ed6ea68ab47)
+
+### <ins>Incorrectly Implemented `nwell.4`:</ins>
+#### 1. Update the following lines in the `sky130A.tech` file to avoid DRC errors:
+![6](https://github.com/user-attachments/assets/ea464b07-43b8-45ec-aeed-e7429e339ee6) <br>
+
+![7](https://github.com/user-attachments/assets/4887fa10-329a-4d20-bb4a-7ad2ab2c0994)
+
+#### Execute the following commands in the `tkcon 2.3 Main` window:
+``` bash
+tech load sky130A.tech
+drc check
+drc why
+```
+
+**Output:**
+![8](https://github.com/user-attachments/assets/72295e2b-8968-4ae3-a830-d0fa5e929930)
+
+
+
+
 
