@@ -8,21 +8,23 @@ Floorplanning is the process of **allocating space**, determining the **shape an
 #### <ins>Key Components:</ins>
 1. **Die Area:**
   The total physical area of the silicon chip.
-2. **Core Area:**
+2. **Core Parameters:**
+   - Core Area:
   The inner region where all logic (standard cells and macros) is placed.
-  **Core Utilization:** Usually 70%-85%, defined as the ratio of standard cell area to the available core area.
-3. **I/O Pad / Pin Placement:**
+   - Core Utilization:
+  Usually 70%-85%, defined as the ratio of standard cell area to the available core area.
+4. **I/O Pad / Pin Placement:**
   Placed around the periphery of the die to interface the chip with the outside world.
-4. **Macro Placement:**
+5. **Macro Placement:**
   Large pre-designed blocks like SRAM, PLLs, or custom IP.
-5. **Placement Strategy:**
+6. **Placement Strategy:**
     - Close to connected logic to minimize wire length (**flylines**)
     - Avoid congestion and routing conflicts
-6. **Standard Cell Rows:**
+7. **Standard Cell Rows:**
   The core area is divided into horizontal rows where standard cells (basic logic gates) are placed and powered.
-7. **Power Planning (PDN):**
+8. **Power Planning (PDN):**
   Critical for delivering stable power. Includes a grid of thick metal straps (VDD & GND). Poor PDN design leads to **IR drop** and timing failures.
-8. **Physical-Only Cells:**
+9. **Physical-Only Cells:**
       - **Tap Cells:** Maintain substrate integrity and prevent latch-up
       - **Endcaps:** Placed at the ends of rows
       - **Blockages:** Reserve areas for future logic or avoid congestion near macros
@@ -55,6 +57,6 @@ Placement is the process of arranging **standard cells** and smaller blocks with
    * Remove overlaps and adhere strictly to placement grids and design rules.
    * Maintain wire length optimization from global placement.
 
-#### 📊  <ins>Process Flow:</ins>
+### 📊 <ins>Process Flow:</ins>
 <img width="1536" height="1024" alt="image" src="https://github.com/user-attachments/assets/4bcd3b87-104d-4a2a-a5da-41ab5f003bdc" />
 
