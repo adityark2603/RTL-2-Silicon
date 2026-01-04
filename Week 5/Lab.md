@@ -24,11 +24,6 @@ $ sudo ./setup.sh
 $ ./build_openroad.sh --local
 ```
 
-**Output:**
-
-![build ](https://github.com/user-attachments/assets/c2c26326-0e51-4a64-9582-33a396747ad9)
-
-
 #### 4. Verify Installation:
 
 ``` bash
@@ -49,10 +44,6 @@ $ cd flow
 $ make
 ```
 
-**Output:**
-
-![make ](https://github.com/user-attachments/assets/06d33fff-2070-4f28-b39e-f3461e72c752)
-
 
 #### 6. Launch the GUI and visualize the final layout:
 
@@ -61,8 +52,35 @@ $ make gui_final
 ```
 
 **Output:**
+![1 orgin](https://github.com/user-attachments/assets/cdfd71db-17da-43c7-b250-7a5ddfda95db)
 
-![make gui final](https://github.com/user-attachments/assets/7a579f37-dc7e-4d4a-80ba-f4d16f503b7d)
 
+After completion of Logic synthesis, Chip outline (floorplanning) and placement, files will be available in the following directory: 
+
+```
+results/nangate45/gcd/base/
+```
+
+<img width="1252" height="550" alt="image" src="https://github.com/user-attachments/assets/3eddf3f1-dbd5-4045-b9e2-919d091c75a5" />
+
+### <ins>Steps to Visualize physical layout: </ins>
+``` bash
+$ cd ~/OpenROAD-flow-scripts
+$ source ./env.sh
+$ cd flow
+$ openroad -gui
+```
+
+#### 1. Floorplan:
+
+![1](https://github.com/user-attachments/assets/1be72b1f-5fb2-4b1f-b2a6-b3e7671f605d)
+
+#### 2. Placement & CTS:
+
+![2](https://github.com/user-attachments/assets/49eda154-50ec-43f2-ae8f-2e23096c9147)
+
+#### 3. Routing & Final layout:
+
+![3](https://github.com/user-attachments/assets/f8e8d713-e4aa-4905-b794-5ce8906d7480)
 
 
