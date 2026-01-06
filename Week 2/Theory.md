@@ -13,10 +13,6 @@ SoCs are widely used in **mobile devices, IoT gadgets, embedded controllers, aut
 <img width="867" height="1305" alt="image" src="https://github.com/user-attachments/assets/23edd6f7-82e4-4a4e-90c9-5cf6b8262598" />
 
 
-
-
-
-
 ### ⚙️ <ins>Components of a Typical SoC:</ins>
 
 1. **CPU (Processor Core)**  
@@ -54,31 +50,31 @@ BabySoC is a **simplified SoC model** that keeps only the essential blocks:
       - Small memory block  
       - A few peripherals (UART/GPIO/timer)  
       - Simple interconnect  <br>
-</br>
-#### Benefits:  
-   - Easier to understand SoC design end-to-end.  
-   - Learn **integration** (address map, interrupts, bus arbitration) without advanced complexity.  
-   - Quick to model, simulate & debug using open-source tools.  <br>
+
+
+**Benefits:**  
+            - Easier to understand SoC design end-to-end.  
+            - Learn **integration** (address map, interrupts, bus arbitration) without advanced complexity.  
+            - Quick to model, simulate & debug using open-source tools.  <br>
 
 
 ### 🧩 <ins>Role of Functional Modelling</ins>
 
 Functional modelling = validating system behaviour **before** RTL coding & physical design.  
 
-#### Importance:  
-   - Catch design issues early (wrong address maps, missed protocols).  
-   - Faster iterations vs RTL.  
-   - Provides **golden reference** (trusted baseline implementation of a system's functionality) for RTL.  
-   - Enables early software bring-up.  <br>
+**Importance:**  
+            - Catch design issues early (wrong address maps, missed protocols).  
+            - Faster iterations vs RTL.  
+            - Provides **golden reference** (trusted baseline implementation of a system's functionality) for RTL.  
+            - Enables early software bring-up.  <br>
 
 
 
 ### 🛠️ <ins>Tools for BabySoC</ins>
-
-- **Icarus Verilog (iverilog)** — simulate Verilog behavioural & RTL models.  
-- **GTKWave** — waveform viewer to debug signals visually.  
-- **Testbenches** — clock/reset generators, ROM loaders, peripheral drivers.  
-- **Assertions** — check bus protocols, ready/valid handshakes.  <br>
+1. **Icarus Verilog (iverilog)** — simulate Verilog behavioural & RTL models.  
+2. **GTKWave** — waveform viewer to debug signals visually.  
+3. **Testbenches** — clock/reset generators, ROM loaders, peripheral drivers.  
+4. **Assertions** — check bus protocols, ready/valid handshakes.  <br>
 
 
 ### 🧮 <ins>Short Note on VSD's BabySoC:</ins>
