@@ -2,7 +2,7 @@
 ## 🍼 BabySoC — Fundamentals of SoC Design & Functional Modelling  
 
 
-## 🖥️ What is a System-on-Chip (SoC)?  
+### 🖥️ What is a System-on-Chip (SoC)?  
 A **System-on-Chip (SoC)** is an **integrated circuit** that consolidates most or all components of a computing system onto a single chip.  
 
 Instead of separate chips for CPU, memory, and peripherals, an SoC integrates them all into one package.  
@@ -14,76 +14,74 @@ SoCs are widely used in **mobile devices, IoT gadgets, embedded controllers, aut
 
 
 
----
 
 
-## ⚙️ Components of a Typical SoC:  
+
+### ⚙️ <ins>Components of a Typical SoC:</ins>
 
 1. **CPU (Processor Core)**  
-   - Executes instructions (fetch → decode → execute).  
-   - May be a simple microcontroller core (RISC) or advanced out-of-order processor.  
+         - Executes instructions (fetch → decode → execute).  
+         - May be a simple microcontroller core (RISC) or advanced out-of-order processor.  
 
 2. **Memory**  
-   - On-chip **SRAM** (stack, heap).  
-   - **ROM/Flash** for boot.  
-   - **Caches** in high-performance SoCs.  
-   - External DRAM controllers.  
+         - On-chip **SRAM** (stack, heap).  
+         - **ROM/Flash** for boot.  
+         - **Caches** in high-performance SoCs.  
+         - External DRAM controllers.  
 
 3. **Peripherals**  
-   - UART, SPI, I²C, GPIO, timers, ADC/DAC, USB, Ethernet, display.  
-   - Interrupt controller, DMA engines.  
+         - UART, SPI, I²C, GPIO, timers, ADC/DAC, USB, Ethernet, display.  
+         - Interrupt controller, DMA engines.  
 
 4. **Interconnect / Bus / Fabric**  
-   - Connects CPU ↔ Memory ↔ Peripherals.  
-   - Examples: AMBA AXI/AHB/APB, crossbars, or NoCs.  
+         - Connects CPU ↔ Memory ↔ Peripherals.  
+         - Examples: AMBA AXI/AHB/APB, crossbars, or NoCs.  
 
 5. **Power & Clock Management**  
-   - PLLs, clock gating, voltage/power domains.  
+         - PLLs, clock gating, voltage/power domains.  
 
 6. **Security & System-level Blocks**  
-   - Crypto engines, secure boot, MPU/TrustZone.  
+         - Crypto engines, secure boot, MPU/TrustZone.  
 
 7. **Debug & Test**  
-   - JTAG, trace ports, debug bridges.  
+         - JTAG, trace ports, debug bridges.  
 
----
 
-## 🎓 Why BabySoC?  
+
+### 🎓 <ins>Why BabySoC?</ins> 
 BabySoC is a **simplified SoC model** that keeps only the essential blocks:  
-- Tiny CPU core  
-- Small memory block  
-- A few peripherals (UART/GPIO/timer)  
-- Simple interconnect  
+      - Tiny CPU core  
+      - Small memory block  
+      - A few peripherals (UART/GPIO/timer)  
+      - Simple interconnect  <br>
+</br>
+#### Benefits:  
+   - Easier to understand SoC design end-to-end.  
+   - Learn **integration** (address map, interrupts, bus arbitration) without advanced complexity.  
+   - Quick to model, simulate & debug using open-source tools.  <br>
 
-### Benefits:  
-- Easier to understand SoC design end-to-end.  
-- Learn **integration** (address map, interrupts, bus arbitration) without advanced complexity.  
-- Quick to model, simulate & debug using open-source tools.  
 
----
-
-## 🧩 Role of Functional Modelling  
+### 🧩 <ins>Role of Functional Modelling</ins>
 
 Functional modelling = validating system behaviour **before** RTL coding & physical design.  
 
-### Importance:  
-- Catch design issues early (wrong address maps, missed protocols).  
-- Faster iterations vs RTL.  
-- Provides **golden reference** (trusted baseline implementation of a system's functionality) for RTL.  
-- Enables early software bring-up.  
+#### Importance:  
+   - Catch design issues early (wrong address maps, missed protocols).  
+   - Faster iterations vs RTL.  
+   - Provides **golden reference** (trusted baseline implementation of a system's functionality) for RTL.  
+   - Enables early software bring-up.  <br>
 
 
----
 
-## 🛠️ Tools for BabySoC  
+### 🛠️ <ins>Tools for BabySoC</ins>
 
 - **Icarus Verilog (iverilog)** — simulate Verilog behavioural & RTL models.  
 - **GTKWave** — waveform viewer to debug signals visually.  
 - **Testbenches** — clock/reset generators, ROM loaders, peripheral drivers.  
-- **Assertions** — check bus protocols, ready/valid handshakes.  
+- **Assertions** — check bus protocols, ready/valid handshakes.  <br>
 
----
-## 🧮 Short Note on VSD's BabySoC:
+
+### 🧮 <ins>Short Note on VSD's BabySoC:</ins>
 The VSDBabySoC is a simple SoC (System-on-Chip) design incorporating a RISC-V processor (rvmyth), a PLL (Phase-Locked Loop) module (pll), and a DAC (Digital-to-Analog Converter) module (dac).
 
 - RVMYTH microprocessor – executes instructions and cycles values through register r17.
